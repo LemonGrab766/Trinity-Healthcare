@@ -2,32 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h2 {
+  @apply text-[60px] font-bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.nav-button {
+  @apply text-[#0C4068] text-lg font-bold p-2 px-5 rounded-md;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav-button:hover {
+  @apply bg-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.bg-sections-home {
+  background-image: url("/images/Frame3-min.png"); /* Ruta de tu imagen */
+  background-size: 50%; /* Escala la imagen a la mitad de su tamaño original */
+  background-position: 150% 10%; /* Alinea la imagen desde el centro hacia la derecha */
+  background-repeat: no-repeat;
+}
+
+.bg-home {
+  background-image: url("/images/home-banner.png"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Cubre completamente el div sin perder las proporciones */
+  background-position: center; /* Centra la imagen en el div */
+}
+.bg-contact {
+  background-image: url("/images/contact.png"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Cubre completamente el div sin perder las proporciones */
+  background-position: center; /* Centra la imagen en el div */
+}
+.bg-about-us {
+  background-image: url("/images/about-us.png"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Cubre completamente el div sin perder las proporciones */
+  background-position: center 5px; /* Centra la imagen en el div */
+}
+.bg-contact-page {
+  background-image: url("/images/contact-page/contact-banner.png"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover; /* Cubre completamente el div sin perder las proporciones */
+  background-position: center 5px; /* Centra la imagen en el div */
 }

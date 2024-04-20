@@ -4,8 +4,7 @@ import Nav from "../Nav/Nav";
 export default function HomeBanner() {
   return (
     <div className=" bg-home">
-      {/* <div className=" bg-[#00aaa4af]"> */}
-      <div>
+      <div className=" bg-[#00aaa4af]">
         <Nav />
         <div className=" flex flex-col justify-center items-center py-60">
           <h1 className=" text-[60px] text-white font-bold">

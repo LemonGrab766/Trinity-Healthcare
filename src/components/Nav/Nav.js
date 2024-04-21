@@ -20,12 +20,20 @@ export default function Nav() {
 
       <div className=" flex flex-col w-2/3 items-end justify-end px-16">
         <div className=" flex justify-center items-center ">
-          <Link href={"/hola"} className="">
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <TwitterIcon />
-          </Link>
-          <a href="https://www.linkedin.com/in/lasonya-darrell" target="_blank" rel="noopener noreferrer">
-    <LinkedinIcon />
-  </a>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lasonya-darrell"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedinIcon />
+          </a>
         </div>
         <div className=" flex justify-between w-full max-w-[1000px] ">
           <Link href={"/about-us"}>

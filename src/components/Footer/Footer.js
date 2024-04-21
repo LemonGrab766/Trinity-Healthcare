@@ -25,12 +25,20 @@ export default function Footer() {
       </div>
       <div className=" flex">
         <div className=" flex justify-center items-end ">
-          <Link href={"/hola"}>
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <TwitterIcon color={"#00AAA3"} />
-          </Link>
-          <Link href={"/hola"}>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lasonya-darrell"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkedinIcon color={"#00AAA3"} />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

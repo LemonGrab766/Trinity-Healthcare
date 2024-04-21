@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import ErrComp from "../ErrComp";
 import BackButton from "../BackButton";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [err, setErr] = useState("");
@@ -10,6 +11,8 @@ export default function LoginPage() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [focusName, setFocusName] = useState(false);
   const [focusPassword, setFocusPassword] = useState(false);
+
+  const route = useRouter()
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
@@ -22,6 +25,9 @@ export default function LoginPage() {
       });
       setMessage(data.message);
       setIsModalVisible(true);
+      if(data?.userLogged?._id){
+        route.push("/admin/blog")
+      }
     } catch (error) {
       setErr("An error has occurred");
       setIsModalVisible(true);

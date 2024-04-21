@@ -14,6 +14,11 @@ h2 {
   @apply bg-white;
 }
 
+.bg-opacity {
+  background-color: #ff6347; /* Rojo tomate */
+  opacity: 0.5;
+}
+
 .bg-sections-home {
   background-image: url("/images/Frame3-min.png"); /* Ruta de tu imagen */
   background-size: 50%; /* Escala la imagen a la mitad de su tamaño original */
@@ -40,4 +45,19 @@ h2 {
   background-image: url("/images/contact-page/contact-banner.png"); /* Reemplaza con la ruta de tu imagen */
   background-size: cover; /* Cubre completamente el div sin perder las proporciones */
   background-position: center 5px; /* Centra la imagen en el div */
+}
+
+.bg-admin {
+  background-image: url("/images/contact.png"); /* Reemplaza con la ruta de tu imagen */
+  /* background-size: auto 100%; */
+  /* background-repeat: repeat-y; Repite la imagen solo verticalmente */
+  /* background-position: center; Centra la imagen en el div */
+}
+
+.imageContainer {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
 }

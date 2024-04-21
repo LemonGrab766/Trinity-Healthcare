@@ -23,9 +23,9 @@ export default function Nav() {
           <Link href={"/hola"} className="">
             <TwitterIcon />
           </Link>
-          <Link href={"/hola"}>
-            <LinkedinIcon />
-          </Link>
+          <a href="https://www.linkedin.com/in/lasonya-darrell" target="_blank" rel="noopener noreferrer">
+    <LinkedinIcon />
+  </a>
         </div>
         <div className=" flex justify-between w-full max-w-[1000px] ">
           <Link href={"/about-us"}>

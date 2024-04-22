@@ -1,3 +1,4 @@
+"use client"
 import AdminNav from "@/components/Admin/AdminNav";
 import BlogBanner from "@/components/Banners/BlogBanner";
 import Blogs from "@/components/Blog/Blogs";

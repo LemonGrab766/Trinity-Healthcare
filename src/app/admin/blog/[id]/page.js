@@ -33,13 +33,6 @@ export default function Page({ params }) {
           <Spinner size={200} />
         </div>
       )}
-      {/* {!loading && blog?._id ? (
-        <FormBlog blogEdit={blog} />
-      ) : (
-        <div className=" bg-white h-screen flex justify-center items-center rounded-2xl m-20">
-          <h2 className=" text-red-700">an error has occurred</h2>
-        </div>
-      )} */}
       {!loading && blog?._id && <FormBlog blogEdit={blog} />}
       {!!error && !loading && (
         <div className=" bg-white h-screen flex justify-center items-center rounded-2xl m-20">

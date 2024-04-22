@@ -5,7 +5,7 @@ import Blog from "@/models/Blog";
 export const POST = async (req) => {
   try {
     await mongooseConnect();
-    const { title, subTitle, image, text } = await req.json();
+    const { title, subTitle, image, text, video } = await req.json();
 
     if (!title || !image || !text) {
       return NextResponse.json({ error: "Missing data" }, { status: 400 });
@@ -15,6 +15,7 @@ export const POST = async (req) => {
       subTitle,
       image,
       text,
+      video
     });
     if (!blog) {
       return NextResponse.json(

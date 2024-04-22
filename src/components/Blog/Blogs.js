@@ -2,12 +2,12 @@
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import ErrComp from "../ErrComp";
 import Spinner from "../Spinner";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function Blogs() {
+function BlogsComponent() {
   const searchParams = useSearchParams();
 
   const search = searchParams.get("page") || 1;
@@ -118,5 +118,13 @@ export default function Blogs() {
         setIsModalVisible={setIsModalVisible}
       />
     </div>
+  );
+}
+
+export default function Blogs() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogsComponent />
+    </Suspense>
   );
 }

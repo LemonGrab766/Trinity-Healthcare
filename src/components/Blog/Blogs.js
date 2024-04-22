@@ -10,12 +10,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 export default function Blogs() {
   const searchParams = useSearchParams();
 
-  const search = searchParams.get("page");
+  const search = searchParams.get("page") || 1;
 
   const router = useRouter();
 
   const [blogs, setBlogs] = useState([]);
-  const [page, setPage] = useState(search || 1);
+  const [page, setPage] = useState(search);
   const [err, setErr] = useState("");
   const [message, setMessage] = useState("");
   const [isModalVisible, setIsModalVisible] = useState(false);

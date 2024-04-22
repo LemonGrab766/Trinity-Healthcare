@@ -41,8 +41,9 @@ export default function Nav() {
           </Link>
 
           <button className="nav-button ">SERVICES</button>
-
-          <button className="nav-button ">BLOG</button>
+          <Link href={"/blog"}>
+            <button className="nav-button ">BLOG</button>
+          </Link>
           <Link href={"/contact"}>
             <button className="nav-button ">CONTACT</button>
           </Link>

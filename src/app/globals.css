@@ -15,43 +15,49 @@ h2 {
 }
 
 .bg-opacity {
-  background-color: #ff6347; /* Rojo tomate */
+  background-color: #ff6347;
   opacity: 0.5;
 }
 
 .bg-sections-home {
-  background-image: url("/images/Frame3-min.png"); /* Ruta de tu imagen */
-  background-size: 50%; /* Escala la imagen a la mitad de su tamaño original */
-  background-position: 150% 10%; /* Alinea la imagen desde el centro hacia la derecha */
+  background-image: url("/images/Frame3-min.png");
+  background-size: 50%;
+  background-position: 150% 10%;
   background-repeat: no-repeat;
 }
 
 .bg-home {
-  background-image: url("/images/home-banner.png"); /* Reemplaza con la ruta de tu imagen */
-  background-size: cover; /* Cubre completamente el div sin perder las proporciones */
-  background-position: center; /* Centra la imagen en el div */
+  background-image: url("/images/home-banner.png");
+  background-size: cover;
+  background-position: center;
 }
 .bg-contact {
-  background-image: url("/images/contact.png"); /* Reemplaza con la ruta de tu imagen */
-  background-size: cover; /* Cubre completamente el div sin perder las proporciones */
-  background-position: center; /* Centra la imagen en el div */
+  background-image: url("/images/contact.png");
+  background-size: cover;
+  background-position: center;
 }
 .bg-about-us {
-  background-image: url("/images/about-us.png"); /* Reemplaza con la ruta de tu imagen */
-  background-size: cover; /* Cubre completamente el div sin perder las proporciones */
-  background-position: center 5px; /* Centra la imagen en el div */
+  background-image: url("/images/about-us.png");
+  background-size: cover;
+  background-position: center 5px;
 }
 .bg-contact-page {
-  background-image: url("/images/contact-page/contact-banner.png"); /* Reemplaza con la ruta de tu imagen */
-  background-size: cover; /* Cubre completamente el div sin perder las proporciones */
-  background-position: center 5px; /* Centra la imagen en el div */
+  background-image: url("/images/contact-page/contact-banner.png");
+  background-size: cover;
+  background-position: center 5px;
 }
 
 .bg-admin {
-  background-image: url("/images/contact.png"); /* Reemplaza con la ruta de tu imagen */
+  background-image: url("/images/contact.png");
   /* background-size: auto 100%; */
-  /* background-repeat: repeat-y; Repite la imagen solo verticalmente */
-  /* background-position: center; Centra la imagen en el div */
+  /* background-repeat: repeat-y;  */
+  /* background-position: center;  */
+}
+
+.bg-blog {
+  background-image: url("/images/blog.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
 .imageContainer {

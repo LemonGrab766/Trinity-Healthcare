@@ -1,5 +1,8 @@
 "use client";
-import FormBlog from "@/components/Admin/Blog/FormBlog";
+import AdminNav from "@/components/Admin/AdminNav";
+import BlogDetailBanner from "@/components/Banners/BlogDetailBanner";
+import Details from "@/components/Blog/Details";
+import Footer from "@/components/Footer/Footer";
 import Spinner from "@/components/Spinner";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -17,7 +20,7 @@ export default function Page({ params }) {
           setBlog(data);
           setLoading(false);
         } catch (error) {
-          setError(true)
+          setError(true);
           setLoading(false);
           console.log(error);
         }
@@ -28,24 +31,20 @@ export default function Page({ params }) {
 
   return (
     <div>
+      <BlogDetailBanner image={blog.image} title={blog.title} />
+      <AdminNav />
       {loading && (
         <div className=" bg-white h-screen flex justify-center items-center rounded-2xl m-20">
           <Spinner size={200} />
         </div>
       )}
-      {/* {!loading && blog?._id ? (
-        <FormBlog blogEdit={blog} />
-      ) : (
-        <div className=" bg-white h-screen flex justify-center items-center rounded-2xl m-20">
-          <h2 className=" text-red-700">an error has occurred</h2>
-        </div>
-      )} */}
-      {!loading && blog?._id && <FormBlog blogEdit={blog} />}
+      {!loading && blog?._id && <Details blog={blog} />}
       {!!error && !loading && (
         <div className=" bg-white h-screen flex justify-center items-center rounded-2xl m-20">
           <h2 className=" text-red-700">an error has occurred</h2>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

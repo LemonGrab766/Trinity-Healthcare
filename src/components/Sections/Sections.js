@@ -26,7 +26,7 @@ export default function Sections() {
       </div>
       <Section
         image={"/images/recent-blog.png"}
-        title={"RECENT BLOG"}
+        title={"BLOG"}
         text={
           "Discover a world of unique ideas and tips on our blog! Dive into inspiring articles and enriching content designed to fuel your curiosity and stimulate your creativity. Click here to explore new horizons every week. Don't miss out!"
         }

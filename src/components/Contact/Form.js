@@ -63,6 +63,7 @@ export default function Form() {
             Your Email
           </label>
           <input
+            type="email"
             id="email"
             name="email"
             className="inline-block w-full border-b-4 focus:outline-none"

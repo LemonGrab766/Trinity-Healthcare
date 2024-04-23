@@ -11,7 +11,6 @@ import { useContext } from "react";
 export default function Home() {
   return (
     <div>
-      <AdminNav />
       <HomeBanner />
       <Sections />
       <Contact />

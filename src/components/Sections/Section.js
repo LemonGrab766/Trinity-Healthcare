@@ -13,7 +13,7 @@ export default function Section({ image, title, text, position }) {
       return "/about-us";
     } else if (title === "SERVICES") {
       return "/services";
-    } else if (title === "RECENT BLOG") {
+    } else if (title === "BLOG") {
       return "/blog";
     } else {
       return "/contact";

@@ -32,7 +32,6 @@ export default function Page({ params }) {
   return (
     <div>
       <BlogDetailBanner image={blog.image} title={blog.title} />
-      <AdminNav />
       {loading && (
         <div className=" bg-white h-screen flex justify-center items-center rounded-2xl m-20">
           <Spinner size={200} />

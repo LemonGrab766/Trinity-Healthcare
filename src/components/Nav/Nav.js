@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TwitterIcon from "../Icons/TwitterIcon";
 import LinkedinIcon from "../Icons/LinkedinIcon";
+import AdminNav from "../Admin/AdminNav";
 
 export default function Nav() {
   const [visible, setVisible] = useState(true);
@@ -33,6 +34,7 @@ export default function Nav() {
           visible ? "translate-y-0 " : "-translate-y-full"
         }`}
       >
+        <AdminNav />
         <div className=" w-1/3 flex justify-center items-center">
           <Link href={"/"}>
             <Image
@@ -43,7 +45,6 @@ export default function Nav() {
             />
           </Link>
         </div>
-
         <div className=" flex flex-col w-2/3 items-end justify-end px-16 -mt-5">
           <div className=" flex justify-center items-center ">
             <a
@@ -65,8 +66,9 @@ export default function Nav() {
             <Link href={"/about-us"}>
               <button className="nav-button ">ABOUT US</button>
             </Link>
-
-            <button className="nav-button ">SERVICES</button>
+            <Link href={"/services"}>
+              <button className="nav-button ">SERVICES</button>
+            </Link>
             <Link href={"/blog"}>
               <button className="nav-button ">BLOG</button>
             </Link>

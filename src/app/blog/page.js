@@ -8,7 +8,6 @@ import React from "react";
 export default function Page() {
   return (
     <div>
-      <AdminNav />
       <BlogBanner />
       <Blogs />
       <Footer />

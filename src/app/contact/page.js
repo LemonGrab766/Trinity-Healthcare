@@ -7,7 +7,6 @@ import React from "react";
 export default function Contact() {
   return (
     <div>
-      <AdminNav />
       <ContactBanner />
       <ContactPage />
       <Footer />

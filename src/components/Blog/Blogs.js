@@ -2,7 +2,7 @@
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import ErrComp from "../ErrComp";
 import Spinner from "../Spinner";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -11,7 +11,7 @@ function BlogsComponent() {
   const searchParams = useSearchParams();
 
   const search = searchParams.get("page") || 1;
-
+  const blogContainerRef = useRef(null);
   const router = useRouter();
 
   const [blogs, setBlogs] = useState([]);
@@ -28,6 +28,14 @@ function BlogsComponent() {
         const { data } = await axios.get("/api/blog?page=" + page);
         setBlogs(data);
         setLoading(false);
+        setTimeout(() => {
+          if (
+            (searchParams.get("page") || page >= 2) &&
+            blogContainerRef.current
+          ) {
+            blogContainerRef.current.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 300);
       } catch (error) {
         setLoading(false);
         setErr("An error has occurred");
@@ -44,7 +52,10 @@ function BlogsComponent() {
     return text;
   }
   return (
-    <div className=" bg-white text-black      mx-20 my-10 ">
+    <div
+      ref={blogContainerRef}
+      className=" bg-white text-black      mx-20 my-10 "
+    >
       <div className="">
         {!!loading && (
           <div className=" flex items-center h-full justify-center mt-60 ">

@@ -11,13 +11,16 @@ export default function JoinAbout() {
         </h2>
         <RowButton link={"/contact"} />
       </div>
-      <div className=" w-[600px]">
+      <div className=" relative w-[600px] h-[240px]">
         <Image
-          src={"/images/about-us-page/join.png"}
+          src={"/images/about-us-page/join-us-2.jpg"}
           alt=""
-          width={600}
-          height={600}
+          // width={600}
+          // height={600}
           className=" shadow-lg rounded-xl  shadow-gray-600"
+          objectFit="cover"
+          objectPosition="top"
+          layout="fill"
         />
       </div>
     </div>

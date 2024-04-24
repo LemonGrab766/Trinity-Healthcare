@@ -1,48 +1,120 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useEffect, useState } from "react";
 
 const CarouselComp = ({ services }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animationClass, setAnimationClass] = useState("");
+
+  const totalServices = services.length;
+
+  const nextService = () => {
+    setAnimationClass("slide-out-left");
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalServices);
+      setAnimationClass("slide-in-right");
+    }, 200);
+  };
+
+  const prevService = () => {
+    setAnimationClass("slide-out-right");
+    setTimeout(() => {
+      setCurrentIndex(
+        (prevIndex) => (prevIndex - 1 + totalServices) % totalServices
+      );
+      setAnimationClass("slide-in-left");
+    }, 200);
+  };
+
+  const service = services[currentIndex];
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimationClass("slide-out-left");
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalServices);
+        setAnimationClass("slide-in-right");
+      }, 200);
+    }, 10000);
+  }, [currentIndex]);
+
   return (
-    <Carousel showThumbs={false} autoPlay infiniteLoop interval={10000}>
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className={` flex flex-col gap-10  h-full p-10 rounded-2xl`}
+    <div className="relative">
+      <button
+        className="absolute -left-10 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#00AAA3] hover:bg-[#00938D] text-white  rounded-lg"
+        onClick={prevService}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6"
         >
-          <h2 className=" text-[#00AAA3] font-normal">
-            <span className="inline-block border-b-4 border-[#00aaa486] mr-8 font-bold">
-              {service.title.split(" ")[0]}
-            </span>
-            {service.title.substring(service.title.indexOf(" ") + 1)}
-          </h2>
-          <div className=" flex sm:max-h-[400px] ">
-            <Image
-              src={service.image}
-              alt={service.title}
-              width={1000}
-              height={1000}
-              // objectFit="cover"
-              // objectPosition="center"
-              // layout="fill"
-              layout="responsive"
-              className=" rounded-2xl shadow-xl shadow-gray-600"
-            />
-          </div>
-          <div className=" flex text-[#0C4068] gap-3 items-center justify-center">
-            {service?.text.map((text, index) => (
-              <div key={index}>
-                <h3 className=" mb-2 font-bold text-[20px]">{text.title}</h3>
-                <p className=" font-medium">{text.text}</p>
-              </div>
-            ))}
-          </div>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+          />
+        </svg>
+      </button>
+      <div
+        className={`flex flex-col gap-10 h-full p-10 rounded-2xl ${animationClass}`}
+      >
+        <h2 className="text-[#00AAA3] font-normal text-center">
+          <span className="inline-block border-b-4 border-[#00aaa486] mr-8 font-bold">
+            {service.title.split(" ")[0]}
+          </span>
+          {service.title.substring(service.title.indexOf(" ") + 1)}
+        </h2>
+        <div className="flex relative sm:max-h-[400px] h-[400px]">
+          <Image
+            src={service.image}
+            alt={service.title}
+            // width={1000}
+            // height={1000}
+            objectPosition="center"
+            objectFit="cover"
+            layout="fill"
+            className="rounded-2xl absolute shadow-xl shadow-gray-600"
+          />
         </div>
-      ))}
-    </Carousel>
+        <div className="flex flex-wrap gap-10 lg:gap-0  text-white justify-around">
+          {service.text.map((text, index) => (
+            <div
+              key={index}
+              className={` ${
+                service.text.length > 2 ? " max-w-[350px] " : " max-w-[400px] "
+              } bg-[#00AAA3] p-5 rounded-xl`}
+            >
+              <h3 className="mb-5 font-bold text-[20px]">{text.title}</h3>
+              <p className="font-medium">{text.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <button
+        className="absolute -right-10 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#00AAA3] hover:bg-[#00938D] text-white  rounded-lg"
+        onClick={nextService}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6 text-white"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </button>
+    </div>
   );
 };
 

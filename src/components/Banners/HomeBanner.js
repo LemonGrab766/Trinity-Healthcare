@@ -7,14 +7,14 @@ export default function HomeBanner() {
       <div className=" bg-[#00aaa4af]">
         <Nav />
         <div className=" flex flex-col justify-center items-center py-60">
-          <h1 className=" text-[60px] text-white font-bold">
+          <h1 className=" text-[80px] text-white font-bold">
             Trinity Healthcare Services
           </h1>
           <div className=" flex bg-white h-1 w-60 mb-1"></div>
-          <p className=" w-2/4 text-center text-white text-[20px]">
+          {/* <p className=" w-2/4 text-center text-white text-[20px]">
             Lorem ipsum dolor sit amet consectetur adipiscing, elit cubilia
             augue tellus rhoncus, mus etiam dictum justo ad.
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

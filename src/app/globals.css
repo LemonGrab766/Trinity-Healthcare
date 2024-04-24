@@ -20,14 +20,14 @@ h2 {
 }
 
 .bg-sections-home {
-  background-image: url("/images/Frame3-min.png");
+  background-image: url("/images/home/icon-bg-home.png");
   background-size: 50%;
   background-position: 150% 10%;
   background-repeat: no-repeat;
 }
 
 .bg-home {
-  background-image: url("/images/home-banner.png");
+  background-image: url("/images/home/home-banner.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -37,7 +37,7 @@ h2 {
   background-position: center;
 }
 .bg-about-us {
-  background-image: url("/images/about-us.png");
+  background-image: url("/images/about-us-page/about-us-banner.jpg");
   background-size: cover;
   background-position: center 5px;
 }
@@ -93,4 +93,56 @@ h2 {
 
 .carousel-image.active {
   opacity: 1;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.5s forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.5s forwards;
+}
+
+.slide-out-left {
+  animation: slideOutToLeft 0.5s forwards;
+}
+
+.slide-out-right {
+  animation: slideOutToRight 0.5s forwards;
 }

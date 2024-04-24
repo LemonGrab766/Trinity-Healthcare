@@ -67,7 +67,7 @@ const services = [
 
 export default function ServiceComp() {
   return (
-    <div className=" my-20 px-40 ">
+    <div className=" my-20 px-20 ">
       <Carousel services={services} />
       <div className=" flex flex-col justify-center items-center gap-4 mt-10">
         <h2 className="  text-[#00AAA3] inline-block border-b-4 border-[#00aaa48c] mb-2">

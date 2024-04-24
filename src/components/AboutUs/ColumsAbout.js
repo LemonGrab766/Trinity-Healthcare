@@ -12,7 +12,7 @@ export default function ColumsAbout() {
         <div className="flex flex-col items-center text-[#00AAA3] p-20">
           <div className="flex items-center justify-center">
             <Image
-              src="/images/about-us-page/out-mission.png"
+              src="/images/about-us-page/icons/out-mission.png"
               alt="Our Mission"
               width={120}
               height={120}
@@ -33,7 +33,7 @@ export default function ColumsAbout() {
         <div className="bg-[#93D3D8] flex flex-col items-center text-[#0C4068] p-20">
           <div className="flex items-center justify-center">
             <Image
-              src="/images/about-us-page/our-vision.png"
+              src="/images/about-us-page/icons/our-vision.png"
               alt="Our Vision"
               width={120}
               height={120}
@@ -52,11 +52,11 @@ export default function ColumsAbout() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 justify-center items-start">
+      <div className="grid grid-cols-2 justify-center items-start">
         <div className="bg-[#93D3D8] flex flex-col items-center text-[#0C4068] p-20">
           <div className="flex items-center justify-center">
             <Image
-              src="/images/about-us-page/our-values.png"
+              src="/images/about-us-page/icons/our-values.png"
               alt="Our Vision"
               width={120}
               height={120}
@@ -133,7 +133,7 @@ export default function ColumsAbout() {
         <div className="flex flex-col items-center text-[#00AAA3] p-20">
           <div className="flex items-center justify-center">
             <Image
-              src="/images/about-us-page/our-experience.png"
+              src="/images/about-us-page/icons/our-experience.png"
               alt="Our Mission"
               width={120}
               height={120}
@@ -154,7 +154,7 @@ export default function ColumsAbout() {
             <div className="flex gap-5 justify-center items-center">
               <div className=" flex min-w-[100px] items-center">
                 <Image
-                  src="/images/about-us-page/strategic-consulting.png"
+                  src="/images/about-us-page/icons/strategic-consulting.png"
                   alt="strategic-consulting"
                   width={120}
                   height={120}
@@ -170,7 +170,7 @@ export default function ColumsAbout() {
             <div className="flex gap-5  max-w-[400px] justify-center items-center">
               <div className=" flex min-w-[100px] items-center">
                 <Image
-                  src="/images/about-us-page/talent-management.png"
+                  src="/images/about-us-page/icons/talent-management.png"
                   alt="talent-management"
                   width={120}
                   height={120}
@@ -187,7 +187,7 @@ export default function ColumsAbout() {
             <div className="flex gap-5  justify-center items-center">
               <div className=" flex min-w-[100px] items-center">
                 <Image
-                  src="/images/about-us-page/health-informatics.png"
+                  src="/images/about-us-page/icons/health-informatics.png"
                   alt="health-informatics"
                   width={120}
                   height={120}
@@ -206,7 +206,7 @@ export default function ColumsAbout() {
             <div className="flex gap-5 justify-center items-center">
               <div className=" flex min-w-[100px] items-center">
                 <Image
-                  src="/images/about-us-page/audit-and-compliance.png"
+                  src="/images/about-us-page/icons/audit-and-compliance.png"
                   alt="audit-and-compliance"
                   width={120}
                   height={120}

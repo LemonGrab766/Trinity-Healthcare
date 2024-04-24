@@ -61,7 +61,7 @@ export default function Nav() {
       ) : null}
 
       <div
-        className={` flex flex-wrap fixed justify-center z-10 w-full bg-[#93d3d8] items-center p-8 py-2 shadow-2xl shadow-gray-600 transition-transform duration-300 ${
+        className={` flex flex-wrap fixed justify-center z-20 w-full bg-[#93d3d8] items-center p-8 py-2 shadow-2xl shadow-gray-600 transition-transform duration-300 ${
           visible ? "translate-y-0 " : "-translate-y-full"
         }`}
       >

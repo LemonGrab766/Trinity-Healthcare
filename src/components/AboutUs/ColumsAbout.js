@@ -6,10 +6,10 @@ export default function ColumsAbout() {
   return (
     <div>
       <div className=" flex justify-center -mb-1">
-        <div className=" flex bg-[#00AAA3] h-1 w-[400px] mb-1"></div>
+        <div className=" flex bg-[#00AAA3] h-1 md:w-[400px] mb-1"></div>
       </div>
-      <div className="grid grid-cols-2 justify-center items-start">
-        <div className="flex flex-col items-center text-[#00AAA3] p-20">
+      <div className="grid  w-full md:grid-cols-2  grid-cols-1 justify-center items-start">
+        <div className="flex flex-col items-center text-[#00AAA3] py-5 md:p-20">
           <div className="flex items-center justify-center">
             <Image
               src="/images/about-us-page/icons/out-mission.png"
@@ -30,7 +30,7 @@ export default function ColumsAbout() {
             sustainability in care delivery."
           </p>
         </div>
-        <div className="bg-[#93D3D8] flex flex-col items-center text-[#0C4068] p-20">
+        <div className="bg-[#93D3D8] w-full flex flex-col items-center text-[#0C4068] py-5  md:p-20">
           <div className="flex items-center justify-center">
             <Image
               src="/images/about-us-page/icons/our-vision.png"
@@ -52,8 +52,8 @@ export default function ColumsAbout() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 justify-center items-start">
-        <div className="bg-[#93D3D8] flex flex-col items-center text-[#0C4068] p-20">
+      <div className="grid md:grid-cols-2 grid-cols-1 w-full justify-center items-start">
+        <div className="bg-[#93D3D8] h-full order-last md:order-first flex flex-col items-center text-[#0C4068] py-5  md:p-20">
           <div className="flex items-center justify-center">
             <Image
               src="/images/about-us-page/icons/our-values.png"
@@ -130,7 +130,7 @@ export default function ColumsAbout() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center text-[#00AAA3] p-20">
+        <div className="flex flex-col items-center text-[#00AAA3] py-5  md:p-20">
           <div className="flex items-center justify-center">
             <Image
               src="/images/about-us-page/icons/our-experience.png"
@@ -139,7 +139,7 @@ export default function ColumsAbout() {
               height={120}
             />
           </div>
-          <h2 className="flex mt-4 gap-4">
+          <h2 className="flex flex-wrap justify-center mt-4 lg:gap-4">
             <span className="font-normal">Our</span>
             <span className="inline-block border-b-4 border-[#00aaa48c]">
               Expertise
@@ -151,7 +151,7 @@ export default function ColumsAbout() {
           </p>
 
           <div className=" mt-20 text-[#0C4068] max-w-[400px] flex flex-col items-center justify-center gap-10">
-            <div className="flex gap-5 justify-center items-center">
+            <div className="flex  gap-5 justify-center items-center">
               <div className=" flex min-w-[100px] items-center">
                 <Image
                   src="/images/about-us-page/icons/strategic-consulting.png"
@@ -167,7 +167,7 @@ export default function ColumsAbout() {
                 <p>Expert advice to optimize processes and policies.</p>
               </div>
             </div>
-            <div className="flex gap-5  max-w-[400px] justify-center items-center">
+            <div className="flex  gap-5  max-w-[400px] justify-center items-center">
               <div className=" flex min-w-[100px] items-center">
                 <Image
                   src="/images/about-us-page/icons/talent-management.png"
@@ -226,7 +226,7 @@ export default function ColumsAbout() {
         </div>
       </div>
       <div className=" flex justify-center -mb-1">
-        <div className=" flex bg-[#00AAA3] h-1 w-[400px] mb-1"></div>
+        <div className=" flex bg-[#00AAA3] h-1 md:w-[400px] mb-1"></div>
       </div>
     </div>
   );

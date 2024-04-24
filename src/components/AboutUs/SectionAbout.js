@@ -4,7 +4,7 @@ import React from "react";
 export default function SectionAbout() {
   return (
     <div
-      className={`grid grid-cols-[1.5fr_2fr] gap-4 p-20 justify-center items-center`}
+      className={`grid md:grid-cols-[1.5fr_2fr] gap-4 p-5  md:p-20 justify-center items-center`}
     >
       <>
         <div className=" flex items-center  justify-center ">
@@ -17,7 +17,7 @@ export default function SectionAbout() {
           />
         </div>
         <div className=" max-w-[800px]">
-          <h2 className=" text-[#00AAA3]  mb-2">
+          <h2 className=" text-[#00AAA3] text-center  mb-2">
             <span className=" font-normal">Welcome to</span> Trinity{" "}
             <span className="inline-block border-b-4 border-[#00aaa48c]">
               HealthCare

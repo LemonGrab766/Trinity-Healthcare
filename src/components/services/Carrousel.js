@@ -30,19 +30,22 @@ const CarouselComp = ({ services }) => {
   const service = services[currentIndex];
 
   useEffect(() => {
-    setTimeout(() => {
+    const interval = setInterval(() => {
       setAnimationClass("slide-out-left");
+
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % totalServices);
         setAnimationClass("slide-in-right");
       }, 200);
     }, 10000);
+
+    return () => clearInterval(interval);
   }, [currentIndex]);
 
   return (
     <div className="relative">
       <button
-        className="absolute -left-10 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#00AAA3] hover:bg-[#00938D] text-white  rounded-lg"
+        className="absolute -bottom-16 left-1/3  lg:bottom-auto lg:-left-10 lg:top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#00AAA3] hover:bg-[#00938D] text-white  rounded-lg"
         onClick={prevService}
       >
         <svg
@@ -61,10 +64,10 @@ const CarouselComp = ({ services }) => {
         </svg>
       </button>
       <div
-        className={`flex flex-col gap-10 h-full p-10 rounded-2xl ${animationClass}`}
+        className={`flex flex-col gap-10 h-full p-5 md:p-10 rounded-2xl ${animationClass}`}
       >
-        <h2 className="text-[#00AAA3] font-normal text-center">
-          <span className="inline-block border-b-4 border-[#00aaa486] mr-8 font-bold">
+        <h2 className="text-[#00AAA3] text-[20px] md:text-[60px] font-normal text-center">
+          <span className="inline-block border-b-4 border-[#00aaa486] mr-3 md:mr-8 font-bold">
             {service.title.split(" ")[0]}
           </span>
           {service.title.substring(service.title.indexOf(" ") + 1)}
@@ -87,7 +90,7 @@ const CarouselComp = ({ services }) => {
               key={index}
               className={` ${
                 service.text.length > 2 ? " max-w-[350px] " : " max-w-[400px] "
-              } bg-[#00AAA3] p-5 rounded-xl`}
+              } bg-[#00AAA3] p-5 rounded-xl mt-3`}
             >
               <h3 className="mb-5 font-bold text-[20px]">{text.title}</h3>
               <p className="font-medium">{text.text}</p>
@@ -96,7 +99,7 @@ const CarouselComp = ({ services }) => {
         </div>
       </div>
       <button
-        className="absolute -right-10 top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#00AAA3] hover:bg-[#00938D] text-white  rounded-lg"
+        className="absolute -bottom-16 right-1/3 lg:bottom-auto  lg:-right-10 lg:top-1/2 -translate-y-1/2 z-10 px-4 py-2 bg-[#00AAA3] hover:bg-[#00938D] text-white  rounded-lg"
         onClick={nextService}
       >
         <svg

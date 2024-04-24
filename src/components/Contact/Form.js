@@ -31,7 +31,7 @@ export default function Form() {
   };
 
   return (
-    <div className="bg-white p-20 flex flex-col rounded-xl  min-w-[630px] shadow-lg shadow-gray-600">
+    <div className="bg-white p-10 md:p-20 flex flex-col rounded-xl  md:min-w-[630px] shadow-lg shadow-gray-600">
       <form onSubmit={onSubmit} className=" flex  flex-col gap-10  ">
         <div className="flex flex-col ">
           <label

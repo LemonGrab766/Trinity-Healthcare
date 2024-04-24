@@ -61,12 +61,12 @@ export default function Nav() {
       ) : null}
 
       <div
-        className={` flex fixed z-10 w-full bg-[#93d3d8] items-center p-8 py-2 shadow-2xl shadow-gray-600 transition-transform duration-300 ${
+        className={` flex flex-wrap fixed justify-center z-10 w-full bg-[#93d3d8] items-center p-8 py-2 shadow-2xl shadow-gray-600 transition-transform duration-300 ${
           visible ? "translate-y-0 " : "-translate-y-full"
         }`}
       >
-        <AdminNav />
-        <div className=" w-1/3 flex justify-center items-center">
+        {/* <AdminNav /> */}
+        <div className=" sm:w-1/3 flex justify-center items-center">
           <Link href={"/"}>
             <Image
               src={"/images/icon.png"}
@@ -76,7 +76,7 @@ export default function Nav() {
             />
           </Link>
         </div>
-        <div className=" flex flex-col w-2/3 items-end justify-end px-16 -mt-5">
+        <div className=" flex flex-col sm:w-2/3 items-end justify-end px-16 -mt-5">
           <div className=" flex justify-center items-center ">
             <a
               href="https://twitter.com/"
@@ -93,24 +93,28 @@ export default function Nav() {
               <LinkedinIcon />
             </a>
           </div>
-          <div className=" flex justify-between max-w-[1000px] ">
-            <Link href={"/about-us"}>
-              <button className="nav-button ">ABOUT US</button>
-            </Link>
-            <Link href={"/services"}>
-              <button className="nav-button ">SERVICES</button>
-            </Link>
-            <Link href={"/blog"}>
-              <button className="nav-button ">BLOG</button>
-            </Link>
-            <Link href={"/contact"}>
-              <button className="nav-button ">CONTACT</button>
-            </Link>
+          <div className=" flex flex-wrap justify-center max-w-[1000px] ">
+            <div className=" flex items-center justify-center">
+              <Link href={"/about-us"}>
+                <button className="nav-button ">ABOUT US</button>
+              </Link>
+              <Link href={"/services"}>
+                <button className="nav-button ">SERVICES</button>
+              </Link>
+            </div>
+            <div className=" flex  items-center justify-center">
+              <Link href={"/blog"}>
+                <button className="nav-button ">BLOG</button>
+              </Link>
+              <Link href={"/contact"}>
+                <button className="nav-button ">CONTACT</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className=" flex mb-[100px]"></div>
+      <div className=" flex mb-[200px] md:mb-[100px]"></div>
     </div>
   );
 }

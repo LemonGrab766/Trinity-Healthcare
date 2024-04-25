@@ -14,7 +14,7 @@ const CarouselComp = ({ services }) => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % totalServices);
       setAnimationClass("slide-in-right");
-    }, 200);
+    }, 370);
   };
 
   const prevService = () => {
@@ -24,7 +24,7 @@ const CarouselComp = ({ services }) => {
         (prevIndex) => (prevIndex - 1 + totalServices) % totalServices
       );
       setAnimationClass("slide-in-left");
-    }, 200);
+    }, 370);
   };
 
   const service = services[currentIndex];
@@ -36,7 +36,7 @@ const CarouselComp = ({ services }) => {
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % totalServices);
         setAnimationClass("slide-in-right");
-      }, 200);
+      }, 370);
     }, 10000);
 
     return () => clearInterval(interval);
@@ -84,15 +84,15 @@ const CarouselComp = ({ services }) => {
             className="rounded-2xl absolute shadow-xl shadow-gray-600"
           /> */}
           <Image
-        src={service.image}
-        alt={service.title}
-        fill
-        style={{
-          objectFit: 'cover',
-          objectPosition: 'center'
-        }}
-        className="rounded-2xl absolute shadow-xl shadow-gray-600"
-      />
+            src={service.image}
+            alt={service.title}
+            fill
+            style={{
+              objectFit: "cover",
+              objectPosition: service.imgProp || "center",
+            }}
+            className="rounded-2xl absolute shadow-xl shadow-gray-600"
+          />
         </div>
         <div className="flex flex-wrap gap-10 lg:gap-0  text-white justify-around">
           {service.text.map((text, index) => (

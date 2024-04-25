@@ -12,7 +12,7 @@ export default function LoginPage() {
   const [focusName, setFocusName] = useState(false);
   const [focusPassword, setFocusPassword] = useState(false);
 
-  const route = useRouter()
+  const route = useRouter();
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
@@ -25,8 +25,8 @@ export default function LoginPage() {
       });
       setMessage(data.message);
       setIsModalVisible(true);
-      if(data?.userLogged?._id){
-        route.push("/admin/blog")
+      if (data?.userLogged?._id) {
+        route.push("/admin/blog");
       }
     } catch (error) {
       setErr("An error has occurred");
@@ -36,9 +36,9 @@ export default function LoginPage() {
 
   return (
     <div className="bg-contact h-screen ">
-      <div className=" h-screen bg-[#3ed3d857] flex justify-center items-center">
+      <div className=" h-screen bg-[#3ed3d857] flex justify-center items-center p-5">
         <BackButton />
-        <div className=" bg-white p-20 flex flex-col rounded-xl  min-w-[630px] shadow-lg shadow-gray-600">
+        <div className=" bg-white p-20 flex flex-col rounded-xl  sm:min-w-[630px] shadow-lg shadow-gray-600">
           <form onSubmit={onSubmit} className=" flex  flex-col gap-10  ">
             <div className="flex flex-col ">
               <label

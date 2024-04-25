@@ -23,7 +23,7 @@ export default function BlogAdmin() {
     return text;
   }
   return (
-    <div className=" bg-white text-black   min-h-screen  shadow-2xl shadow-gray-600   mx-20 my-10 rounded-xl">
+    <div className=" bg-white text-black   min-h-screen  shadow-2xl shadow-gray-600  m-2  md:mx-20 my-10 rounded-xl">
       <div className="">
         <h1 className=" text-center font-bold text-[60px] text-[#0C4068]">
           Blogs

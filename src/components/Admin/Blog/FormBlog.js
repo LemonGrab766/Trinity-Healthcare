@@ -127,14 +127,14 @@ export default function FormBlog({ blogEdit }) {
 
   return (
     <div>
-      <div className=" relative bg-white text-black   min-h-screen  shadow-2xl shadow-gray-600   mx-20 my-10 rounded-xl">
+      <div className=" relative bg-white text-black   min-h-screen  shadow-2xl shadow-gray-600  mx-2 md:mx-20 my-10 rounded-xl">
         {!!blogEdit && (
-          <div className=" absolute right-10 top-8">
+          <div className=" absolute right-0 md:right-10 md:top-8">
             <button
               onClick={deleteBlog}
               className=" flex gap-3 items-center justify-center px-4 py-2 bg-red-600 hover:bg-red-800 rounded-2xl text-white font-semibold"
             >
-              Delete blog
+              <span className=" hidden md:flex">Delete blog</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

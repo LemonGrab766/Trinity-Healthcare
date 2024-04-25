@@ -5,7 +5,8 @@ import RowButton from "../RowButton";
 const services = [
   {
     title: "CONSULTANCY SERVICES",
-    image: "/images/services/health.jpg",
+    image: "/images/services/consultancy-services.jpg",
+    imgProp: "center 18%",
     text: [
       {
         title: "Strategic Healthcare Management:",
@@ -23,7 +24,8 @@ const services = [
   },
   {
     title: "STAFF AUGMENTATION",
-    image: "/images/services/health.jpg",
+    image: "/images/services/staff-augmentation.jpg",
+    imgProp: "center 30%",
     text: [
       {
         title: "Clinical Staffing Solutions:",
@@ -37,7 +39,7 @@ const services = [
   },
   {
     title: "OPERATIONAL IMPROVEMENT",
-    image: "/images/services/health.jpg",
+    image: "/images/services/operationa-impromevent.jpg",
     text: [
       {
         title: "Process Redesign and Efficiency Optimization:",
@@ -51,7 +53,7 @@ const services = [
   },
   {
     title: "TECHNOLOGY IMPLEMENTATION",
-    image: "/images/services/health.jpg",
+    image: "/images/services/technology-implementation.jpg",
     text: [
       {
         title: "EMR and EHR Systems:",

@@ -86,6 +86,7 @@ const CarouselComp = ({ services }) => {
           <Image
             src={service.image}
             alt={service.title}
+            priority
             fill
             style={{
               objectFit: "cover",

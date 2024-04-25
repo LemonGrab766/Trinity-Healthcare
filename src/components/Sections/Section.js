@@ -3,7 +3,6 @@ import React from "react";
 import RowButton from "../RowButton";
 
 export default function Section({ image, title, text, position }) {
-  console.log(position);
   const flexDirection =
     position === "left" ? "md:flex-row bg-[#93d3d8de]" : "md:flex-row-reverse";
 

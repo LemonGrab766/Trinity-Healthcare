@@ -21,11 +21,9 @@ export default function LasonyaInf() {
           </div>
         </div>
         <div className=" max-w-[800px] text-center md:text-start ">
-          <h2 className=" text-[#00AAA3] font-extrabold">
-            LASONYA DARRAELL,
-          </h2>
+          <h2 className=" text-[#00AAA3] font-extrabold">LASONYA DARRAELL,</h2>
           <h3 className=" text-[35px] text-[#00AAA3] mb-3">
-            <span className=" md:inline-block md:border-b-4 md:border-[#00aaa48c]">
+            <span className=" lg:inline-block lg:border-b-4 lg:border-[#00aaa48c]">
               RN BSN, PMP, M.ED, C
             </span>
             OE

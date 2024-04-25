@@ -5,7 +5,7 @@ import React from "react";
 export default function PersonalSummary() {
   return (
     <div>
-      <div className="flex flex-col bg-[#93D3D8] items-center text-[#00AAA3] py-5 md:p-20 md:px-40 px-5">
+      <div className="flex flex-col bg-[#93D3D8] items-center text-[#00AAA3] py-5 md:p-20 lg:px-40 px-5">
         <div className="flex items-center justify-center">
           <Image
             src="/images/personal-page/Icons/profesional-summary.png"

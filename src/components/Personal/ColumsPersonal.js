@@ -24,7 +24,7 @@ export default function ColumsPersonal() {
         <div className=" flex bg-[#00AAA3] h-1 md:w-[400px] mb-1"></div>
       </div>
       <div className="grid  w-full md:grid-cols-2   grid-cols-1 justify-center items-start">
-        <div className="flex flex-col items-center text-[#0C4068] h-full md:border-r-2 md:border-[#00AAA3] py-5 md:p-20 px-5 ">
+        <div className="flex flex-col items-center text-[#0C4068] h-full md:border-r-2 md:border-[#00AAA3] py-5 lg:p-20 px-5 ">
           <div className="flex items-center justify-center mb-3 ">
             <Image
               src="/images/personal-page/Icons/cap.png"
@@ -84,7 +84,7 @@ export default function ColumsPersonal() {
           </div>
         </div>
         <div className=" w-full flex flex-col h-full md:border-l-2 md:border-[#00AAA3] items-center text-[#00AAA3] py-5  md:p-20 px-5">
-          <div className=" md:px-20">
+          <div className=" lg:px-20">
             <div className="flex items-center justify-center">
               <Image
                 src="/images/personal-page/Icons/skill.png"
@@ -110,7 +110,7 @@ export default function ColumsPersonal() {
           <div className=" flex justify-center -mb-1">
             <div className=" flex bg-[#00AAA3] h-1 md:w-[400px] mb-1"></div>
           </div>
-          <div className=" md:px-20 mt-10">
+          <div className=" lg:px-20 mt-10">
             <div className="flex items-center justify-center">
               <Image
                 src="/images/personal-page/Icons/education.png"

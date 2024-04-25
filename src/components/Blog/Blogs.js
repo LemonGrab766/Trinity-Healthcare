@@ -94,7 +94,7 @@ function BlogsComponent() {
         </div>
       </div>
       {!!blogs.length && (
-        <div className=" flex justify-center gap-10 items-center pb-10">
+        <div className=" flex flex-wrap justify-center gap-10 items-center pb-10">
           <button
             onClick={() => {
               if (page > 1) {
@@ -106,7 +106,7 @@ function BlogsComponent() {
           >
             previous page
           </button>
-          <h3 className=" text-[#0C4068] font-bold">{page}</h3>
+          <h3 className="w-full text-center sm:w-auto text-[#0C4068] font-bold">{page}</h3>
           <button
             onClick={() => {
               if (blogs.length >= 6) {

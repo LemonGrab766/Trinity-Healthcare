@@ -31,7 +31,7 @@ export default function Details({ blog }) {
   };
 
   return (
-    <div className=" px-40 py-20 text-[#0C4068]">
+    <div className=" p-5 md:px-40 md:py-20 text-[#0C4068]">
       {!!blog.subTitle && <h2 className=" mb-16">{blog.subTitle}</h2>}
       <div className=" flex flex-col gap-6 font-medium mb-16">
         {paragraphs.map((paragraph, index) => (

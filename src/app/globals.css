@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 h2 {
   @apply text-[60px] font-bold;
 }
@@ -63,6 +65,12 @@ h2 {
   background-image: url("/images/services/services.jpeg");
   background-size: cover;
   background-position: center 80%;
+}
+
+.bg-personal {
+  background-image: url("/images/personal-page/personal-banner.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .imageContainer {
@@ -145,4 +153,35 @@ h2 {
 
 .slide-out-right {
   animation: slideOutToRight 0.5s forwards;
+}
+
+.timeline-container {
+  display: flex;
+  position: relative;
+  padding-left: 20px; /* Espacio para la línea y los puntos */
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Grosor de la línea */
+  background-color: #000; /* Color de la línea */
+}
+
+.timeline-point {
+  width: 10px; /* Diámetro del punto */
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000; /* Color del punto */
+  position: absolute;
+  left: -4px; /* Centrar el punto sobre la línea */
+  top: 0; /* Alineación vertical con cada h3 */
+}
+
+.timeline-item {
+  position: relative;
+  margin-left: 20px; /* Espacio entre la línea y el contenido */
+  margin-bottom: 20px; /* Espacio entre elementos */
 }

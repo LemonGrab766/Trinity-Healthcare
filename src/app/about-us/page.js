@@ -1,5 +1,6 @@
 import ColumsAbout from "@/components/AboutUs/ColumsAbout";
 import JoinAbout from "@/components/AboutUs/JoinAbout";
+import PersonalInf from "@/components/AboutUs/PersonalInf";
 import SectionAbout from "@/components/AboutUs/SectionAbout";
 import AdminNav from "@/components/Admin/AdminNav";
 import AboutUsBanner from "@/components/Banners/AboutUsBanner";
@@ -12,6 +13,7 @@ export default function AboutUs() {
       <AboutUsBanner />
       <SectionAbout />
       <ColumsAbout />
+      <PersonalInf />
       <JoinAbout />
       <Footer />
     </div>

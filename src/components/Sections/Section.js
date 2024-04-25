@@ -38,7 +38,7 @@ export default function Section({ image, title, text, position }) {
           alt={title}
           width={400}
           height={400}
-          layout="intrinsic"
+          // layout="intrinsic"
         />
         <div className="flex absolute -bottom-5 justify-center items-center">
           <RowButton link={getLink()} />

@@ -65,7 +65,7 @@ export default function Nav() {
           visible ? "translate-y-0 " : "-translate-y-full"
         }`}
       >
-        {/* <AdminNav /> */}
+        <AdminNav />
         <div className=" sm:w-1/3 flex justify-center items-center">
           <Link href={"/"}>
             <Image

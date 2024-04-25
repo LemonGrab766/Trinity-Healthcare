@@ -73,7 +73,7 @@ const CarouselComp = ({ services }) => {
           {service.title.substring(service.title.indexOf(" ") + 1)}
         </h2>
         <div className="flex relative sm:max-h-[400px] h-[400px]">
-          <Image
+          {/* <Image
             src={service.image}
             alt={service.title}
             // width={1000}
@@ -82,7 +82,17 @@ const CarouselComp = ({ services }) => {
             objectFit="cover"
             layout="fill"
             className="rounded-2xl absolute shadow-xl shadow-gray-600"
-          />
+          /> */}
+          <Image
+        src={service.image}
+        alt={service.title}
+        fill
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center'
+        }}
+        className="rounded-2xl absolute shadow-xl shadow-gray-600"
+      />
         </div>
         <div className="flex flex-wrap gap-10 lg:gap-0  text-white justify-around">
           {service.text.map((text, index) => (

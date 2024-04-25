@@ -4,11 +4,19 @@ import Networks from "../Networks";
 
 export default function ContactPage() {
   return (
-    <div className=" flex flex-wrap justify-around p-20 bg-[#93D3D8]">
-      <div className=" w-[200px] flex justify-center items-center">
-        <Networks color={"#0C4068"} />
-      </div>
-      <div className=" md:w-[900px]">
+    // <div className=" flex flex-wrap justify-around p-20 bg-[#93D3D8]">
+    //   <div className=" w-[300px] flex justify-center items-center">
+    //     <Networks color={"#0C4068"} />
+    //   </div>
+    //   <div className=" md:w-[900px]">
+    //     <Form />
+    //   </div>
+    // </div>
+    <div className=" bg-[#93D3D8] ">
+      <div className=" flex flex-wrap gap-10 lg:gap-0 items-center justify-evenly p-5 md:p-20 ">
+        <div>
+          <Networks color={"#0C4068"} />
+        </div>
         <Form />
       </div>
     </div>

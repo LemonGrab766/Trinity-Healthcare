@@ -7,11 +7,11 @@ export default function PersonalInfBanner() {
       <div className=" bg-[#0c406898]">
         <Nav />
         <div className=" flex flex-col justify-center items-center py-60">
-          <h1 className=" md:text-[80px] text-center text-white font-medium">
+          <h1 className=" text-[40px] md:text-[80px] text-center text-white font-medium">
             PERSONAL
           </h1>
           <div className=" flex bg-white h-1 w-60 mb-1"></div>
-          <h1 className=" md:text-[80px] text-center text-white font-bold">
+          <h1 className=" text-[40px] md:text-[80px] text-center text-white font-bold">
             INFORMATION
           </h1>
           {/* <p className=" w-2/4 text-center text-white text-[20px]">

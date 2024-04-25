@@ -36,7 +36,7 @@ export default function BlogDetailBanner({ image, title }) {
         <div className="flex flex-col justify-center items-center py-60">
           <h1 className="text-[40px] flex gap-6 text-white font-bold">BLOG</h1>
           <div className="flex bg-white h-1 w-60 mb-1"></div>
-          <h1 className="text-[60px] flex gap-6 text-white font-bold">
+          <h1 className="text-[40px] md:text-[60px] flex gap-6 text-white font-bold">
             {title}
           </h1>
         </div>

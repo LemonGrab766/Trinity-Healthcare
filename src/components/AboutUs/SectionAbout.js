@@ -10,7 +10,7 @@ export default function SectionAbout() {
         <div className=" flex items-center  justify-center ">
           <Image
             className="shadow-lg rounded-xl  shadow-gray-600"
-            src={"/images/about-us-page/about-img.png"}
+            src={"/images/about-us-page/about-img.webp"}
             alt={"AboutImg"}
             width={400}
             height={400}

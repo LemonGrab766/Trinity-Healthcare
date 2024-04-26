@@ -17,7 +17,7 @@ export default function JoinAbout() {
         </div>
         <div className=" w-[200px] h-[100px] relative md:w-[600px] md:h-[240px]">
           <Image
-            src={"/images/about-us-page/join-us.jpg"}
+            src={"/images/about-us-page/join-us.webp"}
             alt=""
             // width={600}
             // height={600}

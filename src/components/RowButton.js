@@ -2,10 +2,14 @@ import Link from "next/link";
 import React from "react";
 
 export default function RowButton({ link }) {
+  const buttonName = link.replace(/\//g, " ").trim();
   return (
     <div>
-      <Link href={link}>
-        <button className=" bg-[#00AAA3] hover:bg-[#00938D] p-2 px-5 rounded-full">
+      <Link href={link} aria-label={buttonName}>
+        <button
+          name={buttonName}
+          className=" bg-[#00AAA3] hover:bg-[#00938D] p-2 px-5 rounded-full"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

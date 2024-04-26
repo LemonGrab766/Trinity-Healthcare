@@ -39,7 +39,7 @@ h2 {
   background-position: center;
 }
 .bg-about-us {
-  background-image: url("/images/about-us-page/about-us-banner.jpg");
+  background-image: url("/images/about-us-page/about-us-banner.webp");
   background-size: cover;
   background-position: center 5px;
 }
@@ -57,12 +57,12 @@ h2 {
 }
 
 .bg-blog {
-  background-image: url("/images/blog.jpeg");
+  background-image: url("/images/blog-min.webp");
   background-size: cover;
   background-position: center;
 }
 .bg-services {
-  background-image: url("/images/services/services.jpeg");
+  background-image: url("/images/services/services.webp");
   background-size: cover;
   background-position: center 80%;
 }

@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Trinity Sevices",
-  description: "Healtcare services",
+  description:
+    "Trinity HealthCare Services: Leading healthcare consultancy and staff augmentation with over 30 years of innovation and expertise.",
 };
 
 export default function RootLayout({ children }) {

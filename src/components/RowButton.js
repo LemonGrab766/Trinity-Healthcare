@@ -5,9 +5,10 @@ export default function RowButton({ link }) {
   const buttonName = link.replace(/\//g, " ").trim();
   return (
     <div>
-      <Link href={link} aria-label={"visit " + buttonName}>
+      <Link href={link}>
         <button
           name={buttonName}
+          aria-label={"visit " + buttonName}
           className=" bg-[#00AAA3] hover:bg-[#00938D] p-2 px-5 rounded-full"
         >
           <svg

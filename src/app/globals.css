@@ -22,19 +22,19 @@ h2 {
 }
 
 .bg-sections-home {
-  background-image: url("/images/home/icon-bg-home.png");
+  background-image: url("/images/home/icon-bg-home.webp");
   background-size: 50%;
   background-position: 150% 10%;
   background-repeat: no-repeat;
 }
 
 .bg-home {
-  background-image: url("/images/home/home-banner.jpg");
+  background-image: url("/images/home/home-banner.webp");
   background-size: cover;
   background-position: center;
 }
 .bg-contact {
-  background-image: url("/images/contact.png");
+  background-image: url("/images/contact.webp");
   background-size: cover;
   background-position: center;
 }
@@ -44,13 +44,13 @@ h2 {
   background-position: center 5px;
 }
 .bg-contact-page {
-  background-image: url("/images/contact-page/contact-banner.png");
+  background-image: url("/images/contact-page/contact-banner.webp");
   background-size: cover;
   background-position: center 5px;
 }
 
 .bg-admin {
-  background-image: url("/images/contact.png");
+  background-image: url("/images/contact.webp");
   /* background-size: auto 100%; */
   /* background-repeat: repeat-y;  */
   /* background-position: center;  */
@@ -68,7 +68,7 @@ h2 {
 }
 
 .bg-personal {
-  background-image: url("/images/personal-page/personal-banner.jpg");
+  background-image: url("/images/personal-page/personal-banner.webp");
   background-size: cover;
   background-position: center;
 }

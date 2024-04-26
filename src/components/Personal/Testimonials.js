@@ -14,7 +14,7 @@ export default function Testimonials() {
         <div className="flex flex-col gap-20 mt-12 px-4 md:px-32 text-[#0C4068]">
           <div className=" relative bg-white rounded-2xl py-8 px-14">
             <Image
-              src={"/images/personal-page/Icons/left.png"}
+              src={"/images/personal-page/Icons/left.webp"}
               height={70}
               width={70}
               alt=""
@@ -30,7 +30,7 @@ export default function Testimonials() {
           </div>
           <div className=" relative bg-white rounded-2xl py-8 px-14">
             <Image
-              src={"/images/personal-page/Icons/right.png"}
+              src={"/images/personal-page/Icons/right.webp"}
               height={70}
               width={70}
               alt=""

@@ -12,7 +12,7 @@ export default function LasonyaInf() {
           <div className="w-[200px] h-[200px] relative md:w-[400px] md:h-[400px] ">
             <Image
               className="shadow-lg rounded-xl  shadow-gray-600"
-              src={"/images/personal-page/lasonya.jpg"}
+              src={"/images/personal-page/lasonya.webp"}
               alt={"LasonyaImg"}
               objectFit="cover"
               objectPosition="center"

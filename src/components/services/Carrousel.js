@@ -30,16 +30,21 @@ const CarouselComp = ({ services }) => {
   const service = services[currentIndex];
 
   useEffect(() => {
+    let isMounted = true; // flag para verificar el montaje del componente
     const interval = setInterval(() => {
-      setAnimationClass("slide-out-left");
-
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalServices);
-        setAnimationClass("slide-in-right");
-      }, 370);
+      if (isMounted) {
+        setAnimationClass("slide-out-left");
+        setTimeout(() => {
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % totalServices);
+          setAnimationClass("slide-in-right");
+        }, 370);
+      }
     }, 10000);
-
-    return () => clearInterval(interval);
+  
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    };
   }, [currentIndex]);
 
   return (
@@ -84,6 +89,7 @@ const CarouselComp = ({ services }) => {
             className="rounded-2xl absolute shadow-xl shadow-gray-600"
           /> */}
           <Image
+            key={service.image}
             src={service.image}
             alt={service.title}
             priority

@@ -7,7 +7,7 @@ export default function PersonalInf() {
     <div className=" flex flex-wrap gap-10 lg:gap-20 items-center justify-center p-20">
       <div className=" w-[200px] h-[100px] relative md:w-[450px] md:h-[240px]">
         <Image
-          src={"/images/personal-page/personal-banner.jpg"}
+          src={"/images/personal-page/personal-banner.webp"}
           alt=""
           className=" shadow-lg rounded-xl  shadow-gray-600"
           objectFit="cover"

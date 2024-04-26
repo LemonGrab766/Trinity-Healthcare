@@ -27,7 +27,7 @@ export default function ColumsPersonal() {
         <div className="flex flex-col items-center text-[#0C4068] h-full md:border-r-2 md:border-[#00AAA3] py-5 lg:p-20 px-5 ">
           <div className="flex items-center justify-center mb-3 ">
             <Image
-              src="/images/personal-page/Icons/cap.png"
+              src="/images/personal-page/Icons/cap.webp"
               alt="Our Mission"
               width={150}
               height={150}
@@ -87,7 +87,7 @@ export default function ColumsPersonal() {
           <div className=" lg:px-20">
             <div className="flex items-center justify-center">
               <Image
-                src="/images/personal-page/Icons/skill.png"
+                src="/images/personal-page/Icons/skill.webp"
                 alt="skill"
                 width={120}
                 height={120}
@@ -113,7 +113,7 @@ export default function ColumsPersonal() {
           <div className=" lg:px-20 mt-10">
             <div className="flex items-center justify-center">
               <Image
-                src="/images/personal-page/Icons/education.png"
+                src="/images/personal-page/Icons/education.webp"
                 alt="education"
                 width={130}
                 height={130}

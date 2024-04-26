@@ -8,7 +8,7 @@ export default function PersonalSummary() {
       <div className="flex flex-col bg-[#93D3D8] items-center text-[#00AAA3] py-5 md:p-20 lg:px-40 px-5">
         <div className="flex items-center justify-center">
           <Image
-            src="/images/personal-page/Icons/profesional-summary.png"
+            src="/images/personal-page/Icons/profesional-summary.webp"
             alt="Our Mission"
             width={120}
             height={120}

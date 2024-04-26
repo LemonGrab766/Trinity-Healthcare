@@ -69,7 +69,7 @@ export default function Nav() {
         <div className=" sm:w-1/3 flex justify-center items-center">
           <Link href={"/"}>
             <Image
-              src={"/images/icon.png"}
+              src={"/images/icon.webp"}
               alt="Icon"
               width={100}
               height={100}
@@ -82,6 +82,7 @@ export default function Nav() {
               href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Twitter"
             >
               <TwitterIcon />
             </a>
@@ -89,6 +90,7 @@ export default function Nav() {
               href="https://www.linkedin.com/in/lasonya-darrell"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Linkedin"
             >
               <LinkedinIcon />
             </a>

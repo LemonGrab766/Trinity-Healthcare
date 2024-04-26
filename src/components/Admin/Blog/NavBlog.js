@@ -50,7 +50,7 @@ export default function NavBlog() {
         <div className=" flex justify-center items-center w-full mt-5">
           <Link href={"/"}>
             <Image
-              src={"/images/Frame.png"}
+              src={"/images/Frame.webp"}
               alt="Icon"
               width={150}
               height={150}

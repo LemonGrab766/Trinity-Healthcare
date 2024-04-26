@@ -12,7 +12,7 @@ export default function Footer() {
         <div className=" bg-white p-5 rounded-2xl">
           <Link href={"/"}>
             <Image
-              src={"/images/Frame.png"}
+              src={"/images/Frame.webp"}
               alt="Icon"
               width={150}
               height={150}
@@ -29,6 +29,7 @@ export default function Footer() {
             href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Twitter"
           >
             <TwitterIcon color={"#00AAA3"} />
           </a>
@@ -36,6 +37,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/lasonya-darrell"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Linkedin"
           >
             <LinkedinIcon color={"#00AAA3"} />
           </a>

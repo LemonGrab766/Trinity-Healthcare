@@ -24,14 +24,14 @@ export default function Footer() {
         </div>
       </div>
       <div className=" flex sm:ml-40">
-        <div className=" flex justify-center items-end ">
+        <div className=" flex justify-center items-end gap-2 ">
           <a
             href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Twitter"
           >
-            <TwitterIcon color={"#00AAA3"} />
+            <TwitterIcon color={"#00AAA3"} w={"35px"} h={"35px"} />
           </a>
           <a
             href="https://www.linkedin.com/in/lasonya-darrell"
@@ -39,7 +39,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="Visit Linkedin"
           >
-            <LinkedinIcon color={"#00AAA3"} />
+            <LinkedinIcon color={"#00AAA3"} w={"38px"} h={"38px"} />
           </a>
         </div>
       </div>

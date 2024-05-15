@@ -9,7 +9,7 @@ export default function RowButton({ link }) {
         <button
           name={buttonName}
           aria-label={"visit " + buttonName}
-          className=" bg-[#00AAA3] hover:bg-[#00938D] p-2 px-5 rounded-full"
+          className=" bg-[#00AAA3] hover:bg-[#00938D] p-2 px-5 "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

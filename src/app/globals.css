@@ -16,6 +16,15 @@ h2 {
   @apply bg-white;
 }
 
+.nav-button-min {
+  @apply text-[#0C4068] text-sm font-medium p-2 px-3 rounded-md;
+}
+
+.nav-button-min:hover {
+  @apply bg-white;
+}
+
+
 .bg-opacity {
   background-color: #ff6347;
   opacity: 0.5;

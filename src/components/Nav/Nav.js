@@ -61,7 +61,7 @@ export default function Nav() {
       ) : null}
 
       <div
-        className={` flex flex-wrap fixed justify-center z-20 w-full bg-[#93d3d8] items-center p-8 py-2 shadow-2xl shadow-gray-600 transition-transform duration-300 ${
+        className={` flex flex-wrap fixed justify-center z-20 w-full bg-[#b3c1cac5] items-center p-8 py-2 shadow-2xl shadow-gray-600 transition-transform duration-300 ${
           visible ? "translate-y-0 " : "-translate-y-full"
         }`}
       >
@@ -77,25 +77,37 @@ export default function Nav() {
           </Link>
         </div>
         <div className=" flex flex-col sm:w-2/3 items-end justify-end px-16 -mt-5">
-          <div className=" flex justify-center items-center ">
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Twitter"
-            >
-              <TwitterIcon />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/lasonya-darrell"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Linkedin"
-            >
-              <LinkedinIcon />
-            </a>
+          <div className=" flex flex-col-reverse mt-10 md:mt-0 md:flex-row justify-center items-center gap-2 ">
+            <div className=" flex items-center">
+              <button className="nav-button-min ">Consultants</button>
+
+              <button className="nav-button-min ">Career</button>
+
+              <Link href={"/blog"}>
+                <button className="nav-button-min ">Blog</button>
+              </Link>
+              <button className="nav-button-min ">News</button>
+            </div>
+            <div className=" flex gap-2 items-center">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Twitter"
+              >
+                <TwitterIcon w={"35px"} h={"35px"} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/lasonya-darrell"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Linkedin"
+              >
+                <LinkedinIcon w={"38px"} h={"38px"} />
+              </a>
+            </div>
           </div>
-          <div className=" flex flex-wrap justify-center max-w-[1000px] ">
+          <div className=" flex flex-wrap justify-center ">
             <div className=" flex items-center justify-center">
               <Link href={"/about-us"}>
                 <button className="nav-button ">ABOUT US</button>
@@ -105,11 +117,11 @@ export default function Nav() {
               </Link>
             </div>
             <div className=" flex  items-center justify-center">
-              <Link href={"/blog"}>
+              {/* <Link href={"/blog"}>
                 <button className="nav-button ">BLOG</button>
-              </Link>
+              </Link> */}
               <Link href={"/contact"}>
-                <button className="nav-button ">CONTACT</button>
+                <button className="nav-button ">CONTACT US</button>
               </Link>
             </div>
           </div>

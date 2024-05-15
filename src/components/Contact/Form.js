@@ -31,7 +31,7 @@ export default function Form() {
   };
 
   return (
-    <div className="bg-white p-10 md:p-20 flex flex-col rounded-xl  md:min-w-[630px] shadow-lg shadow-gray-600">
+    <div className="bg-white px-10 p-5 flex flex-col rounded-3xl  w-full shadow-lg shadow-gray-600">
       <form onSubmit={onSubmit} className=" flex  flex-col gap-10  ">
         <div className="flex flex-col ">
           <label
@@ -45,7 +45,7 @@ export default function Form() {
           <input
             id="name"
             name="name"
-            className="inline-block w-full border-b-4 focus:outline-none"
+            className="inline-block w-full border-b-4 focus:outline-none px-3"
             style={{ borderColor: focusName ? "#00AAA3" : "#ccc" }}
             onFocus={() => setFocusName(true)}
             onBlur={() => setFocusName(false)}
@@ -66,7 +66,7 @@ export default function Form() {
             type="email"
             id="email"
             name="email"
-            className="inline-block w-full border-b-4 focus:outline-none"
+            className="inline-block w-full border-b-4 focus:outline-none px-3"
             style={{ borderColor: focusEmail ? "#00AAA3" : "#ccc" }}
             onFocus={() => setFocusEmail(true)}
             onBlur={() => setFocusEmail(false)}
@@ -86,7 +86,7 @@ export default function Form() {
           <textarea
             id="message"
             name="message"
-            className="inline-block w-full border-4 focus:outline-none rounded-lg min-h-[100px]"
+            className="inline-block w-full border-4 focus:outline-none rounded-lg min-h-[100px] px-3"
             style={{ borderColor: focusMessage ? "#00AAA3" : "#ccc" }}
             onFocus={() => setFocusMessage(true)}
             onBlur={() => setFocusMessage(false)}

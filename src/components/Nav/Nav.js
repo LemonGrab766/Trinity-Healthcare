@@ -34,7 +34,7 @@ export default function Nav() {
   return (
     <div className="">
       {!isMenuOpen ? (
-        <div className=" flex justify-center items-center fixed z-20 right-5 top-5 bg-[#0C4068] text-white p-2 rounded-xl">
+        <div className=" flex justify-center items-center fixed z-40 right-5 top-5 bg-[#0C4068] text-white p-2 rounded-xl">
           <button
             onClick={() => {
               setIsMenuOpen(true);
@@ -61,7 +61,7 @@ export default function Nav() {
       ) : null}
 
       <div
-        className={` flex flex-wrap fixed justify-center z-20 w-full bg-[#b3c1cac5] items-center p-8 py-2 shadow-2xl shadow-gray-600 transition-transform duration-300 ${
+        className={` flex flex-wrap fixed justify-center z-40 w-full bg-[#b3c1ca] items-center p-8 py-2 shadow-2xl shadow-gray-600 transition-transform duration-300 ${
           visible ? "translate-y-0 " : "-translate-y-full"
         }`}
       >

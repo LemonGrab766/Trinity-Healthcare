@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 h2 {
-  @apply text-[60px] font-bold;
+  @apply text-[60px] font-black;
 }
 
 .nav-button {
@@ -80,6 +80,11 @@ h2 {
   background-image: url("/images/personal-page/personal-banner.webp");
   background-size: cover;
   background-position: center;
+}
+.bg-join-us {
+  background-image: url("/images/about-us-page/join-us.webp");
+  background-size: cover;
+  background-position: center 10%;
 }
 
 .imageContainer {
@@ -193,4 +198,9 @@ h2 {
   position: relative;
   margin-left: 20px; /* Espacio entre la línea y el contenido */
   margin-bottom: 20px; /* Espacio entre elementos */
+}
+
+
+.container {
+  overflow-x: hidden;
 }

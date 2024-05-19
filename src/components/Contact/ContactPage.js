@@ -13,11 +13,13 @@ export default function ContactPage() {
     //   </div>
     // </div>
     <div className=" bg-[#93D3D8] ">
-      <div className=" flex flex-wrap gap-10 lg:gap-0 items-center justify-evenly p-5 md:p-20 ">
-        <div>
-          <Networks color={"#0C4068"} />
+      <div className=" flex  flex-col md:flex-row gap-10 items-center justify-evenly p-5 md:p-20 ">
+        <div className=" ">
+          <Networks color={"#0C4068"} size={"10px"} />
         </div>
-        <Form />
+        <div className=" md:w-[70%]">
+          <Form />
+        </div>
       </div>
     </div>
   );

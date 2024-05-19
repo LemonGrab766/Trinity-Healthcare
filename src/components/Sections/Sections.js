@@ -88,8 +88,8 @@ export default function Sections() {
               </svg>
             </div>
             <div className="flex flex-col justify-end items-center md:items-start w-full md:max-w-[600px] md:mr-12 ">
-              <div className=" relative flex justify-start items-start  mb-5">
-                <h2 className=" text-white font-extrabold -mb-3 md:ml-10">
+              <div className=" relative flex justify-start items-start">
+                <h2 className=" text-white font-extrabold -mb-7 md:ml-[60px]">
                   {"SERVICES"}
                 </h2>
               </div>
@@ -104,13 +104,14 @@ export default function Sections() {
       </div>
 
       <div
-        className={`relative flex flex-col-reverse md:flex-row  items-center justify-center w-full my-20 md:px-32  `}
+        className={` relative flex flex-col-reverse md:flex-row  items-center justify-center w-full my-20 md:px-32  `}
       >
         <div className=" w-full">
-          <div className="relative z-20 flex items-center  justify-center  w-full h-48 md:w-[650px] md:h-[400px] ">
-            <div className=" hidden md:flex absolute top-[170px] left-0 flex-1 pt-[400px] pr-5 bg-[#93d3d875] mb-5 w-screen">
-              <div className="absolute bg-[#0C4068] w-12 h-12 top-32 -left-3 z-30"></div>
-            </div>
+          <div className=" hidden md:flex absolute top-[170px]  right-0 flex-1 pt-[400px]  bg-[#93d3d875] w-screen">
+            <div className="absolute bg-[#0C4068] w-12 h-12 top-32 left-[120px] z-30"></div>
+          </div>
+          <div className=" relative z-20 flex items-center  justify-center  w-full h-48 md:w-[650px] md:h-[400px] ">
+            <div className=" hidden md:flex absolute top-[170px] z-20 right-[100%] flex-1 pt-[400px]  bg-white w-screen"></div>
             <Image
               className=" "
               src={"/images/blog-min.webp"}

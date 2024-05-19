@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function RowButton({ link }) {
+export default function RowButton({ link, whiteButton }) {
   const buttonName = link.replace(/\//g, " ").trim();
   return (
     <div>
@@ -9,7 +9,11 @@ export default function RowButton({ link }) {
         <button
           name={buttonName}
           aria-label={"visit " + buttonName}
-          className=" bg-[#00AAA3] hover:bg-[#00938D] p-2 px-5 "
+          className={` ${
+            whiteButton
+              ? `bg-white hover:bg-[#00AAA3] text-[#00AAA3] hover:text-white `
+              : "bg-[#00AAA3] hover:bg-[#00938D] text-white"
+          } p-2 px-5  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +21,7 @@ export default function RowButton({ link }) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 text-white"
+            className={`w-6 h-6 `}
           >
             <path
               strokeLinecap="round"

@@ -4,24 +4,26 @@ import React from "react";
 export default function SectionAbout() {
   return (
     <div
-      className={`grid md:grid-cols-[1.5fr_2fr] gap-4 p-5  md:p-20 justify-center items-center`}
+      className={` relative grid md:grid-cols-[1.5fr_2fr]  justify-center items-center`}
     >
       <>
-        <div className=" flex items-center  justify-center ">
+        <div className=" relative z-20 flex items-start justify-start w-full h-48 md:w-[600px] md:h-[400px]">
           <Image
-            className="shadow-lg rounded-xl  shadow-gray-600"
+            className=""
             src={"/images/about-us-page/about-img.webp"}
             alt={"AboutImg"}
-            width={400}
-            height={400}
+            fill
+            style={{
+              objectFit: "cover",
+              objectPosition: "center 50%",
+            }}
           />
         </div>
-        <div className=" max-w-[800px]">
-          <h2 className=" text-[#00AAA3] text-center  mb-2">
-            <span className=" font-normal">Welcome to</span> Trinity{" "}
-            <span className="inline-block border-b-4 border-[#00aaa48c]">
-              HealthCare
-            </span>{" "}
+        <div className=" hidden md:flex absolute  flex-1 pt-[200px] pr-5 bg-[#93d3d875] mb-5 w-screen"></div>
+
+        <div className=" relative z-20 w-full ">
+          <h2 className=" text-[#0C4068] text-start pl-5  mb-2 max-w-[800px]">
+            <span className=" font-normal">Welcome to</span> Trinity HealthCare
             Services
           </h2>
         </div>

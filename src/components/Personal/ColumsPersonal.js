@@ -19,11 +19,11 @@ const education = [
 
 export default function ColumsPersonal() {
   return (
-    <div>
-      <div className=" flex justify-center -mb-1">
+    <div className=" relative">
+      <div className="  flex justify-center -mb-1">
         <div className=" flex bg-[#00AAA3] h-1 md:w-[400px] mb-1"></div>
       </div>
-      <div className="grid  w-full md:grid-cols-2   grid-cols-1 justify-center items-start">
+      <div className="grid w-full md:grid-cols-2   grid-cols-1 justify-center items-start">
         <div className="flex flex-col items-center text-[#0C4068] h-full md:border-r-2 md:border-[#00AAA3] py-5 lg:p-20 px-5 ">
           <div className="flex items-center justify-center mb-3 ">
             <Image
@@ -34,12 +34,12 @@ export default function ColumsPersonal() {
             />
           </div>
           <div className="md:px-20">
-            <h2 className=" mt-4  leading-none">
-              <span className="font-normal mr-5">CARRER</span>
-              <span className="inline-block border-b-4 border-[#00aaa48c]">
-                HIGHLIGHTS
-              </span>
-            </h2>
+            <div className=" relative py-2 mt-3">
+              <h2 className=" relative z-10  font-semibold leading-none">
+                CARRER HIGHLIGHTS
+              </h2>
+              <div className=" hidden md:flex absolute top-0 -right-[10px] flex-1  h-full pr-5 bg-[#93d3d875] mb-5 w-screen"></div>
+            </div>
             <div className=" flex relative mt-10">
               <div className=" flex bg-[#00aaa436] absolute h-[70%] w-[6px] mb-1 ml-2"></div>
               <div className=" ml-10 flex flex-col gap-10">
@@ -83,7 +83,7 @@ export default function ColumsPersonal() {
             </div>
           </div>
         </div>
-        <div className=" w-full flex flex-col h-full md:border-l-2 md:border-[#00AAA3] items-center text-[#00AAA3] py-5  md:p-20 px-5">
+        <div className="  w-full flex flex-col h-full md:border-l-2 md:border-[#00AAA3] items-center text-[#00AAA3] py-5  md:p-20 px-5">
           <div className=" lg:px-20">
             <div className="flex items-center justify-center">
               <Image
@@ -93,11 +93,8 @@ export default function ColumsPersonal() {
                 height={120}
               />
             </div>
-            <h2 className=" mt-7  leading-none">
-              <span className="font-normal 2xl:mr-5 ">SKILLS AND</span>
-              <span className="inline-block border-b-4 border-[#00aaa48c] ">
-                EXPERTISE
-              </span>
+            <h2 className=" mt-7 font-semibold leading-none">
+              SKILLS AND EXPERTISE
             </h2>
             <div className=" py-10 pl-10 text-[#0C4068]">
               <ul className=" list-disc">
@@ -110,21 +107,20 @@ export default function ColumsPersonal() {
           <div className=" flex justify-center -mb-1">
             <div className=" flex bg-[#00AAA3] h-1 md:w-[400px] mb-1"></div>
           </div>
-          <div className=" lg:px-20 mt-10">
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/personal-page/Icons/education.webp"
-                alt="education"
-                width={130}
-                height={130}
-              />
-            </div>
+          <div className=" lg:px-20 mt-20">
+            <div className=" ">
+              <div className=" relative z-10 flex items-center justify-center">
+                <Image
+                  src="/images/personal-page/Icons/education.webp"
+                  alt="education"
+                  width={130}
+                  height={130}
+                />
+              </div>
 
-            <h2 className=" mt-7 ">
-              <span className="inline-block border-b-4 border-[#00aaa48c] ">
-                EDUCATION
-              </span>
-            </h2>
+              <h2 className=" relative z-10 mt-7 ">EDUCATION</h2>
+              <div className=" hidden md:flex absolute top-[57%] right-0 flex-1  h-[22%] bg-[#93d3d875] mb-5 w-[40%]"></div>
+            </div>
 
             <div className=" py-10 pl-10 text-[#0C4068]">
               <ul className=" list-disc">

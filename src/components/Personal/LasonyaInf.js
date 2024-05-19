@@ -4,25 +4,23 @@ import Networks from "../Networks";
 
 export default function LasonyaInf() {
   return (
-    <div
-      className={`grid md:grid-cols-[1.5fr_2fr] grid-cols-1  p-5  md:p-20 justify-center items-center`}
-    >
+    <div className={`grid md:grid-cols-[1.8fr_2fr] grid-cols-1 `}>
       <>
-        <div className=" w-full flex justify-center md:justify-end pr-10">
-          <div className="w-[200px] h-[200px] relative md:w-[400px] md:h-[400px] ">
+        <div className=" flex ">
+          <div className="w-[200px] h-[200px] relative md:w-[600px] md:h-[500px] ">
             <Image
-              className="shadow-lg rounded-xl  shadow-gray-600"
+              className=""
               src={"/images/personal-page/lasonya.webp"}
               alt={"LasonyaImg"}
               objectFit="cover"
-              objectPosition="center"
+              objectPosition="center 40%"
               layout="fill"
             />
           </div>
         </div>
-        <div className=" max-w-[800px] text-center md:text-start ">
+        <div className=" max-w-[800px] text-center md:text-start flex flex-col justify-center">
           <h2 className=" text-[#00AAA3] font-extrabold">LASONYA DARRAELL,</h2>
-          <h3 className=" text-[35px] text-[#00AAA3] mb-3">
+          <h3 className=" text-[25px] text-[#00AAA3] mb-3">
             <span className=" lg:inline-block lg:border-b-4 lg:border-[#00aaa48c]">
               RN BSN, PMP, M.ED, C
             </span>

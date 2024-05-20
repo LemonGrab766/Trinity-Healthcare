@@ -80,7 +80,7 @@ export default function ColumsAbout() {
       </div>
       <div className={`relative flex flex-col md:flex-row  items-end `}>
         <div className=" hidden md:flex absolute top-0  z-[1] flex-1 pt-[450px] bg-white  w-[250px]"></div>
-        <div className=" hidden md:flex absolute top-0  flex-1 pt-[450px] bg-[#93d3d875]  w-screen">
+        <div className=" hidden md:flex absolute top-0 right-0  flex-1 pt-[450px] bg-[#93d3d875]  w-screen">
           <div className=" z-20 bg-[#00AAA3] p-1 hidden md:flex absolute -bottom-[0px] left-[250px]">
             <svg
               width="80"

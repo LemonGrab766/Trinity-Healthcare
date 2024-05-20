@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Section from "./Section";
 import Image from "next/image";
@@ -35,9 +36,13 @@ export default function Sections() {
               </h2>
             </div>
             <p className=" px-5 md:px-0 md:ml-10 text-[#0C4068] text-justify">
-              {
-                "Welcome to Trinity Healthcare Services, here every action and decision is aimed at revolutionizing healthcare.  With over three decades of experience and a deep foundation in health informatics, we have established ourselves as leaders in healthcare consulting and talent management. Our team of experts works tirelessly to lead each organization toward unprecedented operational efficiency and top-quality patient care."
-              }
+              Welcome to Trinity Healthcare Services, here every action and
+              decision is aimed at revolutionizing healthcare. With over three
+              decades of experience and a deep foundation in health informatics,
+              we have established ourselves as leaders in healthcare consulting
+              and talent management. Our team of experts works tirelessly to
+              lead each organization toward unprecedented operational efficiency
+              and top-quality patient care.
             </p>
           </div>
         </div>
@@ -90,13 +95,14 @@ export default function Sections() {
             <div className="flex flex-col justify-end items-center md:items-start w-full md:max-w-[600px] md:mr-12 ">
               <div className=" relative flex justify-start items-start">
                 <h2 className=" text-white font-extrabold -mb-7 md:ml-[60px]">
-                  {"SERVICES"}
+                  SERVICES
                 </h2>
               </div>
               <p className=" p-5 md:ml-10 text-white text-justify ">
-                {
-                  "Our services are designed to elevate the standards of care, efficiency, and effectiveness within healthcare organizations. Explore our range of expert services tailored to meet the evolving needs of the healthcare sector:"
-                }
+                Our services are designed to elevate the standards of care,
+                efficiency, and effectiveness within healthcare organizations.
+                Explore our range of expert services tailored to meet the
+                evolving needs of the healthcare sector:
               </p>
             </div>
           </div>
@@ -136,9 +142,10 @@ export default function Sections() {
             </h2>
           </div>
           <p className=" md:ml-10 text-[#0C4068] text-justify">
-            {
-              "Discover a world of unique ideas and tips on our blog! Dive into inspiring articles and enriching content designed to fuel your curiosity and stimulate your creativity. Click here to explore new horizons every week. Don't miss out!"
-            }
+            Discover a world of unique ideas and tips on our blog! Dive into
+            inspiring articles and enriching content designed to fuel your
+            curiosity and stimulate your creativity. Click here to explore new
+            horizons every week. Don't miss out!
           </p>
         </div>
       </div>

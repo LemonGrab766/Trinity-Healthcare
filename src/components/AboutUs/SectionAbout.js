@@ -19,7 +19,7 @@ export default function SectionAbout() {
             }}
           />
         </div>
-        <div className=" hidden md:flex absolute  flex-1 pt-[200px] pr-5 bg-[#93d3d875] mb-5 w-screen"></div>
+        <div className=" hidden md:flex absolute  flex-1 right-0 pt-[200px] bg-[#93d3d875] mb-5 w-screen"></div>
 
         <div className=" relative z-20 w-full ">
           <h2 className=" text-[#0C4068] text-start pl-5  mb-2 max-w-[800px]">

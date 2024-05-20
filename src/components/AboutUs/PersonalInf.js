@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PersonalInf() {
   return (
-    <div className=" flex flex-wrap gap-10 lg:gap-12 items-center py-20">
+    <div className="  grid md:grid-cols-[1.5fr_2fr]  gap-10 lg:gap-12 items-center py-20">
       <div className=" w-[200px] h-[100px] relative md:w-[650px] md:h-[340px]">
         <Image
           src={"/images/personal-page/personal-banner.webp"}

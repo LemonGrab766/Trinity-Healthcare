@@ -24,13 +24,19 @@ export function StrategicIcon() {
   );
 }
 
-export function TalentIcon() {
+export function TalentIcon({ noColor, h, w }) {
   return (
-    <div className=" bg-[#0C4068] flex items-center justify-center px-3 py-3 rounded-full">
+    <div
+      className={` ${
+        noColor ? "" : "bg-[#0C4068]"
+      } flex items-center justify-center px-3 py-3 rounded-full`}
+      style={{ width: w || "85px", height: h ||"85px" }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="60"
-        height="60"
+        // width={w || "60"}
+        // height={h || "60"}
+        viewBox="0 0 60 60"
         fill="none"
       >
         <g fill="#fff" clipPath="url(#a)">

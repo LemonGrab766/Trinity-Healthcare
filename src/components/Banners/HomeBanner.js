@@ -1,9 +1,13 @@
 import React from "react";
 import Nav from "../Nav/Nav";
+import Head from "next/head";
 
 export default function HomeBanner() {
   return (
     <div className=" bg-home">
+      <Head>
+        <title>Trinity Healthcare Services</title>
+      </Head>
       <div className=" bg-[#0c4068c5]">
         <Nav />
         <div className=" flex flex-col justify-center items-center py-60">

@@ -1,9 +1,13 @@
 import React from "react";
 import Nav from "../Nav/Nav";
+import Head from "next/head";
 
 export default function ContactBanner() {
   return (
     <div className=" bg-contact-page">
+      <Head>
+        <title>Contact</title>
+      </Head>
       <div className=" bg-[#00aaa48f]">
         <Nav />
         <div className=" flex flex-col justify-center items-center py-60">

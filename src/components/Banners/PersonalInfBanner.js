@@ -1,9 +1,13 @@
 import React from "react";
 import Nav from "../Nav/Nav";
+import Head from "next/head";
 
 export default function PersonalInfBanner() {
   return (
     <div className=" bg-personal">
+      <Head>
+        <title>Personal Information</title>
+      </Head>
       <div className=" bg-[#0c406898]">
         <Nav />
         <div className=" flex flex-col justify-center items-center py-60">

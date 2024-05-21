@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Nav from "../Nav/Nav";
+import Head from "next/head";
 
 export default function BlogDetailBanner({ image, title }) {
   const [bgLoaded, setBgLoaded] = useState(false);
@@ -13,6 +14,9 @@ export default function BlogDetailBanner({ image, title }) {
 
   return (
     <div style={{ position: "relative" }}>
+      <Head>
+        <title>{title || "Blog"}</title>
+      </Head>
       <div
         style={{
           backgroundImage: `url(${image})`,

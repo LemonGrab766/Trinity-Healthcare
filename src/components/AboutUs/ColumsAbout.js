@@ -252,7 +252,14 @@ export default function ColumsAbout() {
             EXPERTISE
           </h2>
           <div className=" w-full md:py-3 md:mt-10  bg-[#93d3d875] text-[#0C4068] md:pl-32   ">
-            <div className=" text-[25px] mt-20 md:pr-5 text-[#0C4068] flex flex-col items-start justify-center gap-10">
+            <div className=" text-[25px] mt-8 md:pr-5 text-[#0C4068] flex flex-col items-start justify-center gap-10">
+              <div className="flex mb-10 justify-center items-start">
+                <h3>
+                  We offer a wide range of services designed to elevate the
+                  standards of care and operation across all facets of the
+                  healthcare industry:
+                </h3>
+              </div>
               <div className="flex  gap-5 justify-center items-center">
                 <div className=" flex min-w-[100px] items-center">
                   <StrategicIcon />

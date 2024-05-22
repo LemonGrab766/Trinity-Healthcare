@@ -10,7 +10,7 @@ export default function AdminNav() {
     <div className=" fixed left-5 z-20  top-10 ">
       {!user?.name ? null : (
         <Link href={"/admin/blog"}>
-          <button className=" nav-button bg-[#93d3d8]">Blog</button>
+          <button className=" nav-button bg-[#b3c1ca]">Blog</button>
         </Link>
       )}
     </div>

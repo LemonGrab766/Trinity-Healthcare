@@ -79,10 +79,10 @@ export default function Nav() {
         <div className=" flex flex-col sm:w-2/3 items-end justify-end px-16 -mt-5">
           <div className=" flex flex-col-reverse mt-10 md:mt-0 md:flex-row justify-center items-center gap-2 ">
             <div className=" flex items-center">
-              <button className="nav-button-min ">Consultants</button>
-
-              <button className="nav-button-min ">Career</button>
-
+              {/* <button className="nav-button-min ">Consultants</button> */}
+              <Link href={"/personal-information"}>
+              <button className="nav-button-min ">Personal Information</button>
+              </Link>
               <Link href={"/blog"}>
                 <button className="nav-button-min ">Blog</button>
               </Link>

@@ -4,16 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-export default function BlogAdmin() {
-  const [blogs, setBlogs] = useState([]);
+export default function NewsAdmin() {
+  const [news, setNews] = useState([]);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    const getBlogs = async () => {
-      const { data } = await axios.get("/api/blog?page=" + page);
-      setBlogs(data);
+    const getNews = async () => {
+      const { data } = await axios.get("/api/news?page=" + page);
+      setNews(data);
     };
-    getBlogs();
+    getNews();
   }, [page]);
 
   function truncateText(text, maxLength) {
@@ -26,10 +26,10 @@ export default function BlogAdmin() {
     <div className=" relative bg-white text-black   min-h-screen  shadow-2xl shadow-gray-600  m-2  md:mx-20 my-10 rounded-xl">
       <div className="">
         <h1 className=" text-center font-bold text-[60px] text-[#0C4068]">
-          Blogs
+          News
         </h1>
         <Link
-          href={"/admin/blog/form"}
+          href={"/admin/news/form"}
           className=" absolute right-5 top-5 flex justify-center items-center
            bg-[#00AAA3]  hover:bg-[#00938D]  px-2 py-2 ml-[-20px]
             rounded-lg  text-white"
@@ -48,22 +48,25 @@ export default function BlogAdmin() {
               d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
             />
           </svg>
-          Create Blog
+          Create New
         </Link>
 
         <div className=" flex flex-wrap justify-center items-center p-20 gap-10">
-          {!!blogs.length &&
-            blogs?.map((blog) => (
-              <Link href={"/admin/blog/" + blog._id} key={blog._id}>
+          {!!news.length &&
+            news?.map((n) => (
+              <Link
+                href={"/admin/news/" + n.title.replace(/ /g, "-").toLowerCase()}
+                key={n._id}
+              >
                 <div className=" w-[300px] bg-[#93D3D8] hover:bg-white border-2 hover:border-[#00AAA3] p-5 rounded-2xl">
                   <div className=" flex flex-col gap-3 items-center justify-center">
                     <h1 className="text-[#0C4068] font-bold text-[15px] ">
-                      {blog.title}
+                      {n.title}
                     </h1>
                     <div className="imageContainer shadow-2xl shadow-gray-600">
                       <Image
-                        src={blog.image}
-                        alt={blog.title}
+                        src={n.image}
+                        alt={n.title}
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center"
@@ -72,7 +75,7 @@ export default function BlogAdmin() {
                   </div>
                   <div className=" flex  mt-4 justify-center items-center text-[#0C4068]">
                     <p className="text-[14px] font-medium text-center px-3">
-                      {truncateText(blog.text, 120)}{" "}
+                      {truncateText(n.text, 120)}{" "}
                       {/* Ejemplo con 100 caracteres */}
                     </p>
                   </div>
@@ -95,7 +98,7 @@ export default function BlogAdmin() {
         <h3>{page}</h3>
         <button
           onClick={() => {
-            if (blogs.length >= 6) {
+            if (news.length >= 6) {
               setPage(page + 1);
             }
           }}

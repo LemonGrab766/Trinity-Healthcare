@@ -23,12 +23,12 @@ export default function ErrComp({
   return (
     <div>
       {isModalVisible && err && !message && (
-        <div className="fixed bottom-4 left-4 bg-red-500 text-white p-2 rounded-md">
+        <div className=" z-20 fixed bottom-4 left-4 bg-red-500 text-white p-2 rounded-md">
           {err}
         </div>
       )}
       {isModalVisible && message && !err && (
-        <div className="fixed bottom-4 left-4 bg-green-500 text-white p-2 rounded-md">
+        <div className=" z-20 fixed bottom-4 left-4 bg-green-500 text-white p-2 rounded-md">
           {message}
         </div>
       )}

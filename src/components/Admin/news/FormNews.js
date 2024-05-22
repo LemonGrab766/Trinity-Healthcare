@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
-export default function FormBlog({ blogEdit }) {
+export default function FormNews({ newsEdit }) {
   const [err, setErr] = useState("");
   const [message, setMessage] = useState("");
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -20,8 +20,8 @@ export default function FormBlog({ blogEdit }) {
 
   const route = useRouter();
 
-  const [blog, setBlog] = useState(
-    blogEdit || {
+  const [news, setNews] = useState(
+    newsEdit || {
       title: "",
       subTitle: "",
       image: "",
@@ -29,26 +29,28 @@ export default function FormBlog({ blogEdit }) {
       video: "",
     }
   );
+  console.log(news);
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
     try {
-      if (!blogEdit) {
-        const { data } = await axios.post("/api/blog", blog);
+      if (!newsEdit) {
+        const { data } = await axios.post("/api/news", news);
 
-        setBlog({
+        setNews({
           title: "",
           subTitle: "",
           image: "",
           text: "",
           video: "",
         });
-        setMessage("Blog Created");
+        setMessage("New Created");
+        route.push("/admin/news");
       } else {
-        const { data } = await axios.put("/api/blog", blog);
+        const { data } = await axios.put("/api/news", news);
 
-        setMessage("Blog edited");
-        route.push("/admin/blog");
+        setMessage("New edited");
+        route.push("/admin/news");
       }
       setIsModalVisible(true);
     } catch (error) {
@@ -68,7 +70,7 @@ export default function FormBlog({ blogEdit }) {
       const res = await axios.post(`/api/s3`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      setBlog((prev) => ({
+      setNews((prev) => ({
         ...prev,
         image: res.data.link,
       }));
@@ -80,21 +82,21 @@ export default function FormBlog({ blogEdit }) {
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
 
-    setBlog((prevData) => ({
+    setNews((prevData) => ({
       ...prevData,
       [name]: files ? files[0] : value,
     }));
   };
 
   function deleteImg() {
-    setBlog((prev) => ({
+    setNews((prev) => ({
       ...prev,
       image: "",
     }));
   }
 
-  async function deleteBlog() {
-    if (!blogEdit) {
+  async function deleteNews() {
+    if (!newsEdit) {
       return;
     }
     try {
@@ -110,13 +112,13 @@ export default function FormBlog({ blogEdit }) {
       });
 
       if (result.isConfirmed) {
-        const { data } = await axios.delete("/api/blog?id=" + blog._id);
+        const { data } = await axios.delete("/api/news?id=" + news._id);
         Swal.fire({
           title: "Deleted",
           text: "The record has been deleted.",
           icon: "success",
         });
-        route.push("/admin/blog");
+        route.push("/admin/news");
         return;
       }
     } catch (error) {
@@ -128,13 +130,13 @@ export default function FormBlog({ blogEdit }) {
   return (
     <div>
       <div className=" relative bg-white text-black   min-h-screen  shadow-2xl shadow-gray-600  mx-2 md:mx-20 my-10 rounded-xl">
-        {!!blogEdit && (
+        {!!newsEdit && (
           <div className=" absolute right-0 md:right-10 md:top-8">
             <button
-              onClick={deleteBlog}
+              onClick={deleteNews}
               className=" flex gap-3 items-center justify-center px-4 py-2 bg-red-600 hover:bg-red-800 rounded-2xl text-white font-semibold"
             >
-              <span className=" hidden md:flex">Delete blog</span>
+              <span className=" hidden md:flex">Delete new</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -154,7 +156,7 @@ export default function FormBlog({ blogEdit }) {
         )}
         <div className="">
           <h1 className=" text-center font-bold text-[60px] text-[#0C4068]">
-            {!blogEdit ? "Create Blog" : "Edit Blog"}
+            {!newsEdit ? "Create New" : "Edit New"}
           </h1>
         </div>
         <div className=" p-10">
@@ -179,16 +181,16 @@ export default function FormBlog({ blogEdit }) {
                 onBlur={() => setFocusTitle(false)}
                 placeholder="Title"
                 required
-                value={blog.title}
+                value={news.title}
               />
             </div>
             <div className="flex gap-5 items-center">
-              {!!blog.image && !isUpload && (
+              {!!news.image && !isUpload && (
                 <div className=" w-auto bg-gray-200 p-1 shadow-sm rounded-sm border border-gray-300 relative">
                   <Image
                     className="rounded-lg"
                     alt=""
-                    src={blog.image}
+                    src={news.image}
                     width={100}
                     height={100}
                   />
@@ -246,7 +248,7 @@ export default function FormBlog({ blogEdit }) {
                 onChange={handleInputChange}
                 onFocus={() => setFocusSubtitle(true)}
                 onBlur={() => setFocusSubtitle(false)}
-                value={blog.subTitle}
+                value={news.subTitle}
                 placeholder="subTitle"
               />
             </div>
@@ -257,7 +259,7 @@ export default function FormBlog({ blogEdit }) {
                   focusText ? "text-[#00AAA3]" : "text-gray-400"
                 }`}
               >
-                Blog Text
+                New Text
               </label>
               <textarea
                 id="text"
@@ -267,7 +269,7 @@ export default function FormBlog({ blogEdit }) {
                 onChange={handleInputChange}
                 onFocus={() => setFocusText(true)}
                 onBlur={() => setFocusText(false)}
-                value={blog.text}
+                value={news.text}
                 placeholder="text..."
               />
             </div>
@@ -289,7 +291,7 @@ export default function FormBlog({ blogEdit }) {
                 onChange={handleInputChange}
                 onFocus={() => setFocusVideo(true)}
                 onBlur={() => setFocusVideo(false)}
-                value={blog.video}
+                value={news.video}
                 placeholder="Url..."
               />
             </div>
@@ -297,16 +299,16 @@ export default function FormBlog({ blogEdit }) {
               Submit
             </button>
           </form>
-          <ErrComp
-            isModalVisible={isModalVisible}
-            setIsModalVisible={setIsModalVisible}
-            err={err}
-            setErr={setErr}
-            message={message}
-            setMessage={setMessage}
-          />
         </div>
       </div>
+      <ErrComp
+        isModalVisible={isModalVisible}
+        setIsModalVisible={setIsModalVisible}
+        err={err}
+        setErr={setErr}
+        message={message}
+        setMessage={setMessage}
+      />
     </div>
   );
 }

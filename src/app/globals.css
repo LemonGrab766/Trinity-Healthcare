@@ -70,6 +70,11 @@ h2 {
   background-size: cover;
   background-position: center;
 }
+.bg-blog {
+  background-image: url("/images/news/news.webp");
+  background-size: cover;
+  background-position: center;
+}
 .bg-services {
   background-image: url("/images/services/services.webp");
   background-size: cover;
@@ -88,7 +93,7 @@ h2 {
 }
 
 .imageContainer {
-  width: 200px;
+  /* width: 200px; */
   height: 200px;
   position: relative;
   overflow: hidden;

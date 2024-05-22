@@ -86,7 +86,9 @@ export default function Nav() {
               <Link href={"/blog"}>
                 <button className="nav-button-min ">Blog</button>
               </Link>
+              <Link href={"/news"}>
               <button className="nav-button-min ">News</button>
+              </Link>
             </div>
             <div className=" flex gap-2 items-center">
               <a

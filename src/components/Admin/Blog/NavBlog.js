@@ -8,9 +8,9 @@ export default function NavBlog() {
   const [isOpen, setIsOpen] = useState(false);
 
   const inactiveLink =
-    "flex hover:bg-[#00938D]  px-2 py-2 hover:ml-[-20px] hover:rounded-lg";
+    "flex hover:bg-[#00938D]  px-2 py-2 ml-[-20px] hover:rounded-lg";
   const activeLink =
-    inactiveLink + " bg-[#00AAA3] px-2 py-2 ml-[-30px] text-white rounded-lg";
+    inactiveLink + " bg-[#00AAA3] px-2 py-2 ml-[-20px] text-white rounded-lg";
   const pathname = usePathname();
 
   return (
@@ -66,13 +66,11 @@ export default function NavBlog() {
             Blogs
           </Link>
           <Link
-            href={"/admin/blog/form"}
+            href={"/admin/news"}
             onClick={() => setIsOpen(!isOpen)}
-            className={
-              pathname === "/admin/blog/form" ? activeLink : inactiveLink
-            }
+            className={pathname === "/admin/news" ? activeLink : inactiveLink}
           >
-            Create Blog
+            News
           </Link>
         </nav>
       </div>

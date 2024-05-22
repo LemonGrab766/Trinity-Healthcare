@@ -72,7 +72,7 @@ function NewsComponent() {
               >
                 <div className=" flex w-full  gap-6 hover:bg-[#93D3D8] p-5 rounded-2xl">
                   <div className=" flex w-full  gap-3 items-center justify-center">
-                    <div className=" w-full imageContainer shadow-2xl shadow-gray-600">
+                    <div className="imageContainer shadow-2xl shadow-gray-600">
                       <Image
                         src={n.image}
                         alt={n.title}

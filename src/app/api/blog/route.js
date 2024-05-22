@@ -15,7 +15,7 @@ export const POST = async (req) => {
       subTitle,
       image,
       text,
-      video
+      video,
     });
     if (!blog) {
       return NextResponse.json(
@@ -33,10 +33,14 @@ export const POST = async (req) => {
 export const GET = async (req) => {
   try {
     await mongooseConnect();
-    const _id = new URL(req.url).searchParams.get("id");
+    const titleParam = new URL(req.url).searchParams.get("title");
 
-    if (_id) {
-      const blog = await Blog.findById(_id);
+    if (titleParam) {
+      const processedTitle = titleParam.replace(/-/g, " ").toLowerCase();
+      const blog = await Blog.findOne({
+        title: new RegExp(`^${processedTitle}$`, "i"),
+      });
+
       if (blog) {
         return NextResponse.json(blog, { status: 200 });
       } else {

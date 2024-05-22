@@ -54,7 +54,7 @@ export default function BlogAdmin() {
         <div className=" flex flex-wrap justify-center items-center p-20 gap-10">
           {!!blogs.length &&
             blogs?.map((blog) => (
-              <Link href={"/admin/blog/" + blog._id} key={blog._id}>
+              <Link href={"/admin/blog/" + blog.title.replace(/ /g, "-").toLowerCase()} key={blog._id}>
                 <div className=" w-[300px] bg-[#93D3D8] hover:bg-white border-2 hover:border-[#00AAA3] p-5 rounded-2xl">
                   <div className=" flex flex-col gap-3 items-center justify-center">
                     <h1 className="text-[#0C4068] font-bold text-[15px] ">

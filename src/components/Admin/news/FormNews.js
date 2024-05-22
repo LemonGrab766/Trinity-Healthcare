@@ -45,7 +45,7 @@ export default function FormNews({ newsEdit }) {
           video: "",
         });
         setMessage("New Created");
-        route.push("/admin/news");
+        // route.push("/admin/news");
       } else {
         const { data } = await axios.put("/api/news", news);
 

@@ -9,10 +9,10 @@ export default function Page({ params }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   useEffect(() => {
-    if (params.id) {
+    if (params.title) {
       const getBlog = async () => {
         try {
-          const { data } = await axios.get("/api/blog?id=" + params.id);
+          const { data } = await axios.get("/api/blog?title=" + params.title);
 
           setBlog(data);
           setLoading(false);

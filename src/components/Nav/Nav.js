@@ -111,11 +111,11 @@ export default function Nav() {
           </div>
           <div className=" flex flex-wrap justify-center ">
             <div className=" flex items-center justify-center">
-              <Link href={"/about-us"}>
-                <button className="nav-button ">ABOUT US</button>
-              </Link>
               <Link href={"/services"}>
                 <button className="nav-button ">SERVICES</button>
+              </Link>
+              <Link href={"/about-us"}>
+                <button className="nav-button ">ABOUT US</button>
               </Link>
             </div>
             <div className=" flex  items-center justify-center">

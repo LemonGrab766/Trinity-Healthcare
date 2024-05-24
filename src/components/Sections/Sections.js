@@ -99,10 +99,9 @@ export default function Sections() {
                 </h2>
               </div>
               <p className=" p-5 md:ml-10 text-white text-justify ">
-                Our services are designed to elevate the standards of care,
-                efficiency, and effectiveness within healthcare organizations.
-                Explore our range of expert services tailored to meet the
-                evolving needs of the healthcare sector:
+                Transform healthcare with Trinity HealthCare Services. Expert
+                consultancy and staff solutions that drive efficiency and
+                innovation in care delivery.
               </p>
             </div>
           </div>
@@ -113,7 +112,7 @@ export default function Sections() {
         className={` relative flex flex-col-reverse md:flex-row  items-center justify-center w-full my-20 md:px-32  `}
       >
         <div className=" w-full">
-          <div className=" hidden md:flex absolute top-[170px]  right-0 flex-1 pt-[400px]  bg-[#93d3d875] w-screen">
+          <div className=" hidden md:flex absolute top-[190px]  right-0 flex-1 pt-[400px]  bg-[#93d3d875] w-screen">
             <div className="absolute bg-[#0C4068] w-12 h-12 top-32 left-[120px] z-30"></div>
           </div>
           <div className=" relative z-20 flex items-center  justify-center  w-full h-48 md:w-[650px] md:h-[400px] ">
@@ -142,10 +141,8 @@ export default function Sections() {
             </h2>
           </div>
           <p className=" md:ml-10 text-[#0C4068] text-justify">
-            Discover a world of unique ideas and tips on our blog! Dive into
-            inspiring articles and enriching content designed to fuel your
-            curiosity and stimulate your creativity. Click here to explore new
-            horizons every week. Don't miss out!
+            Explore our blog for fresh insights on revolutionizing healthcare
+            through expert consultancy and strategic staff solutions.
           </p>
         </div>
       </div>

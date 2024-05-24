@@ -8,19 +8,31 @@ export default function Form() {
   const [message, setMessage] = useState("");
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [focusName, setFocusName] = useState(false);
+  const [focusLastName, setFocusLastName] = useState(false);
   const [focusEmail, setFocusEmail] = useState(false);
   const [focusMessage, setFocusMessage] = useState(false);
+  const [focusPhone, setFocusPhone] = useState(false);
+  const [focusOrganization, setFocusOrganization] = useState(false);
+  const [focusType, setFocusType] = useState("");
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
     try {
       const name = ev.target.name.value;
+      const lastName = ev.target["last-name"].value;
       const email = ev.target.email.value;
       const message = ev.target.message.value;
+      const phone = ev.target.phone.value;
+      const organization = ev?.target?.organization?.value || "";
+
       const { data } = await axios.post("/api/send", {
         name,
+        lastName,
         email,
         message,
+        phone,
+        focusType,
+        organization,
       });
       setMessage(data.message);
       setIsModalVisible(true);
@@ -40,7 +52,7 @@ export default function Form() {
               focusName ? "text-[#00AAA3]" : "text-gray-400"
             }`}
           >
-            Your Name
+            First Name
           </label>
           <input
             id="name"
@@ -49,7 +61,27 @@ export default function Form() {
             style={{ borderColor: focusName ? "#00AAA3" : "#ccc" }}
             onFocus={() => setFocusName(true)}
             onBlur={() => setFocusName(false)}
-            placeholder="Name LastName"
+            placeholder="First Name*"
+            required
+          />
+        </div>
+        <div className="flex flex-col ">
+          <label
+            htmlFor="last-name"
+            className={`text-20px font-bold mb-3 ${
+              focusLastName ? "text-[#00AAA3]" : "text-gray-400"
+            }`}
+          >
+            Last Name
+          </label>
+          <input
+            id="last-name"
+            name="last-name"
+            className="inline-block w-full border-b-4 focus:outline-none px-3"
+            style={{ borderColor: focusLastName ? "#00AAA3" : "#ccc" }}
+            onFocus={() => setFocusLastName(true)}
+            onBlur={() => setFocusLastName(false)}
+            placeholder="Last Name*"
             required
           />
         </div>
@@ -70,10 +102,97 @@ export default function Form() {
             style={{ borderColor: focusEmail ? "#00AAA3" : "#ccc" }}
             onFocus={() => setFocusEmail(true)}
             onBlur={() => setFocusEmail(false)}
-            placeholder="email@gmail.com"
+            placeholder="Email*"
             required
           />
         </div>
+        <div className="flex flex-col">
+          <label
+            htmlFor="phone"
+            className={`text-20px font-bold mb-3 ${
+              focusPhone ? "text-[#00AAA3]" : "text-gray-400"
+            }`}
+          >
+            Your Phone
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            className="inline-block w-full border-b-4 focus:outline-none px-3"
+            style={{ borderColor: focusPhone ? "#00AAA3" : "#ccc" }}
+            onFocus={() => setFocusPhone(true)}
+            onBlur={() => setFocusPhone(false)}
+            placeholder="Phone"
+            // pattern="^[\d+\-()]*$"
+            required
+          />
+        </div>
+        <div className="flex flex-col">
+          <label
+            htmlFor="type"
+            className={`text-20px font-bold mb-3  text-gray-400
+            `}
+            // ${
+            //   focusPhone ? "text-[#00AAA3]" : "text-gray-400"
+            // }
+          >
+            Which best describes you?
+          </label>
+          <div className="flex items-center mb-4">
+            <input
+              type="radio"
+              id="health_system"
+              name="type"
+              value="health_system"
+              className="mr-2"
+              onChange={(ev) => setFocusType(ev.target.value)}
+              required
+            />
+            <label htmlFor="health_system" className="text-gray-700">
+              Health system
+            </label>
+          </div>
+          <div className="flex items-center">
+            <input
+              type="radio"
+              id="talent"
+              name="type"
+              value="talent"
+              onChange={(ev) => setFocusType(ev.target.value)}
+              className="mr-2"
+              required
+            />
+            <label htmlFor="talent" className="text-gray-700">
+              Talent
+            </label>
+          </div>
+        </div>
+
+        {focusType === "health_system" && (
+          <div className="flex flex-col">
+            <label
+              htmlFor="organization"
+              className={`text-20px font-bold mb-3 ${
+                focusOrganization ? "text-[#00AAA3]" : "text-gray-400"
+              }`}
+            >
+              Organization
+            </label>
+            <input
+              type="text"
+              id="organization"
+              name="organization"
+              className="inline-block w-full border-b-4 focus:outline-none px-3"
+              style={{ borderColor: focusOrganization ? "#00AAA3" : "#ccc" }}
+              onFocus={() => setFocusOrganization(true)}
+              onBlur={() => setFocusOrganization(false)}
+              placeholder="Organization Name*"
+              // required
+            />
+          </div>
+        )}
+
         <div className="flex flex-col">
           <label
             htmlFor="message"
@@ -93,6 +212,7 @@ export default function Form() {
             placeholder="message..."
           />
         </div>
+
         <button className=" bg-[#00AAA3] hover:bg-[#00938D] text-white py-2 rounded-2xl">
           Send Message
         </button>

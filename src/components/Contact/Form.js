@@ -205,7 +205,7 @@ export default function Form() {
           <textarea
             id="message"
             name="message"
-            className="inline-block w-full border-4 focus:outline-none rounded-lg min-h-[100px] px-3"
+            className="inline-block w-full border-4 focus:outline-none rounded-lg min-h-[100px] max-h-[200px] px-3"
             style={{ borderColor: focusMessage ? "#00AAA3" : "#ccc" }}
             onFocus={() => setFocusMessage(true)}
             onBlur={() => setFocusMessage(false)}
